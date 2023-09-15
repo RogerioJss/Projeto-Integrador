@@ -2,9 +2,9 @@ import styled from "styled-components"
 
 const Icone = styled.img`
 `
-const IconeInput = ({src, id}) => {
+const IconeInput = ({src, id, className}) => {
     return(
-        <Icone src={src} className="icones" id={id} />
+        <Icone src={src} className={className} id={id} />
     )
 }
 

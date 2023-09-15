@@ -9,6 +9,11 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+* {
+  margin: 0; /*zera todas as medidas de margem que o navegador coloca*/
+  padding: 0;/*zera todas as medidads de preenchimento que o navegador colocar*/
+  box-sizing: border-box; /* medida do tamanho da caixa é definida a partir da medida da borda*/
+}
 body {
   margin: 0;
   background-color: ${CoresTemaEscuro.corDeFundo};
@@ -232,20 +237,19 @@ template {
 }
 
 #userIcon{
-  position: relative !important;
-  bottom: 47px !important;
-  left: 20px;
+  position: absolute !important;
+  right: 80% !important;
 }
 
 #senhaIcon{
-  position: relative !important;
+  position: absolute !important;
   bottom: 47px !important;
   left: 20px;
   
 }
 
 #mostrarSenha{
-  position: relative !important;
+  position: absolute !important;
   bottom: 47px !important;
   right: -250px;
   transition: transform 0.4s ease;
@@ -254,6 +258,35 @@ template {
 #mostrarSenha:hover{
   transform: scale(1.3) !important;
 }
+
+@media(max-width: 1920px){
+  #userIcon{
+    position: absolute !important;
+    top: 24%;
+    left: 3%;
+  }
+
+  #senhaIcon{
+  position: absolute !important;
+  top: 24%;
+  left: 3%;
+}
+
+  #mostrarSenha{
+    position: absolute !important;
+    bottom: 20% !important;
+    left: 90%;
+    transition: transform 0.4s ease;
+    width: 30px;
+    height: 30px;
+}
+}
+
+.itemNavecacao{
+  width: 50px !important;
+  height: 50px !important;
+}
+  
 `
 
 export default EstilosGlobais

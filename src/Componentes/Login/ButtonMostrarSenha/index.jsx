@@ -13,10 +13,10 @@ const ButtonMostrarSenhaEstilizado = styled.button`
     outline: none;
 `
 
-const ButtonMostrarSenha = ({onClick,src}) => {
+const ButtonMostrarSenha = ({onClick,src,id,className}) => {
     return (
-        <ButtonMostrarSenhaEstilizado onClick={onClick} id="mostrarSenha">
-            <IconeInput src={src}/> 
+        <ButtonMostrarSenhaEstilizado onClick={onClick} id={id}>
+            <IconeInput src={src} className={className} /> 
         </ButtonMostrarSenhaEstilizado>
     )
 }
