@@ -8,6 +8,7 @@ const LinksEstilizados = styled.a`
     font-style: normal;
     font-weight: 200;
     line-height: normal;
+    padding: 24px;
 `
 
 

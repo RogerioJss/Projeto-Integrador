@@ -7,20 +7,20 @@ import Links from "../Links";
 import ButtonEntrar from "./ButtonEntrar";
 import ButtonMostrarSenha from "./ButtonMostrarSenha";
 import React, { useState } from 'react';
-
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const DivLogin = styled.div`
     background-color: ${CoresTemaEscuro.corDivs};
-    width: 40vw;
-    height: 90vh;
+    width: 55vw;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 27px;
+    gap: 33px;
+    margin: auto;
    
     button{
-        margin: 0 58px;
         transition: transform 0.3s ease;
     }
 
@@ -30,7 +30,6 @@ const DivLogin = styled.div`
     }
 
     a{
-        margin: 0 58px;
         transition: transform 0.3s ease;
     }
 
@@ -42,11 +41,6 @@ const DivLogin = styled.div`
     img{
         width: 277px;
         height: 233px;
-        margin: 0 58px;
-    }
-
-    input{
-        margin: 0 58px;
     }
 
     div{
@@ -58,9 +52,10 @@ const DivLogin = styled.div`
     }
 `
 const DivEstilizada = styled.div`
-    
-    
+   position: relative;
 `
+
+
 
 const Login = () => {
     const [senhaVisivel, setSenhaVisivel] = useState(false);
@@ -73,13 +68,14 @@ const Login = () => {
         <img src="/src/assets/logo.png" alt="" />
         <DivEstilizada>
             <InputText placeholder={"Digite seu email"} type={"email"}/>
-            <IconeInput src={SVGS.UserIcon} id={"userIcon"} /> 
+            <IconeInput src={SVGS.UserIcon} id={"userIcon"} className={"icones"} /> 
         </DivEstilizada>
         <DivEstilizada>
             <InputText placeholder={"Digite sua senha "}  type={senhaVisivel ? "text" : "password"} id={"senha"}/>
-            <IconeInput src={SVGS.SenhaIcon} id={"senhaIcon"}/> 
-            <ButtonMostrarSenha onClick={handleMostrarSenha} src={senhaVisivel ? SVGS.MostrarSenhaVisivel : SVGS.MostrarSenhaIcon}/>
+            <IconeInput src={SVGS.SenhaIcon} id={"senhaIcon"} className={"icones"}/> 
+            <ButtonMostrarSenha onClick={handleMostrarSenha} src={senhaVisivel ? SVGS.MostrarSenhaVisivel : SVGS.MostrarSenhaIcon} id={"mostrarSenha"} className={"icones"}/>
         </DivEstilizada>
+       
         <Links href={"#"} target={"_blank"}>
                 Esqueceu sua senha?
         </Links>

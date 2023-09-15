@@ -9,6 +9,7 @@ const ButtonEstilizado = styled.button`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    padding: 24px;
     
 `
 
