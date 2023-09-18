@@ -1,5 +1,6 @@
 import ReactModal from "react-modal";
 import styled from "styled-components";
+import ProfilePictureUpload from "./ProfilePicture";
 
 ReactModal.setAppElement("#root");
 
@@ -13,6 +14,7 @@ const Modal = ({stateOpen, stateClose, idExterno, idConteudo,closeModal}) =>{
                 onRequestClose={stateClose}
                 overlayClassName={idExterno} 
                 className={idConteudo}>
+                 <ProfilePictureUpload/>   
                 <ButtonEstilizado onClick={closeModal}>Close MOdal</ButtonEstilizado>
     </ReactModal>
     )
