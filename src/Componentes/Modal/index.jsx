@@ -6,6 +6,8 @@ ReactModal.setAppElement("#root");
 
 const ButtonEstilizado = styled.button`
 background-color: red;
+max-height: 96px;
+max-width: 96px;
 `
 
 const Modal = ({stateOpen, stateClose, idExterno, idConteudo,closeModal}) =>{

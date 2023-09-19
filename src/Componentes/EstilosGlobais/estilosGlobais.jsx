@@ -287,6 +287,40 @@ template {
   height: 50px !important;
 }
   
+/* Profile Picture*/
+.dropzone {
+  color: ${CoresTemaEscuro.corTextos} ; 
+  background-color: ${CoresTemaEscuro.corDivs};
+  border-radius: 50%;
+  font-size: 20px;
+  text-align: center;
+  height: 173px;
+  max-width: 202px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid ;
+}
+
+.image-preview img{
+  width: 205px;
+  height: 178px;
+  border-radius: 50%;
+  border: 2px solid;
+}
+
+//Modal
+
+.conteudoModal{
+  background-color: ${CoresTemaEscuro.corDivs};
+  width: 50%;
+  min-height: 50vh;
+  max-height: 825px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  
+}
 `
 
 export default EstilosGlobais
