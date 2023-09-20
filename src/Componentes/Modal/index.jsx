@@ -8,40 +8,31 @@ import CoresTemaEscuro from "/src/Colors/cores.js"
 ReactModal.setAppElement("#root");
 
 const ButtonEstilizado = styled.button`
-    width: 96px;
-    height: 96px;
-    background: none;
-    border: none;
-    color: inherit;
-    text-decoration: none;
-    position: absolute;
-    right: 10px;
-    img{
-        width: 96px;
-        height: 96px;
-    }
-    
+  all: initial;
 `
+
 const ContainerTextos = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    color: ${CoresTemaEscuro.corTextos};
-    h1{
-        color: ${CoresTemaEscuro.corTitulos};
-    }
-    h2{
-        color: ${CoresTemaEscuro.corTitulos};
-    }
-    position: absolute;
-    top: 200px;
-    gap: 10px;
-    font-size: 17px;
+    text-align: center;
+
+ color: ${CoresTemaEscuro.corTextos};
+
+ h1{
+    color: ${CoresTemaEscuro.corTitulos};
+ }
+
+ h2{
+    color: ${CoresTemaEscuro.corTitulos};
+ }
+ p{
+    padding: 10px;
+    font-size: 20px;
+ }
 `
 
-
-const Modal = ({stateOpen, stateClose, idExterno, idConteudo,closeModal,src,className,id,fecharComCliqueFora}) =>{
+const Modal = ({stateOpen, stateClose, idExterno, idConteudo,closeModal,fecharComCliqueFora,src,className,id}) =>{
     return(
     <ReactModal isOpen={stateOpen}
                 onRequestClose={stateClose}

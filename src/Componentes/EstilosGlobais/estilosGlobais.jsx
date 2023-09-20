@@ -329,12 +329,14 @@ template {
 
 .conteudoModal{
   background-color: ${CoresTemaEscuro.corDivs};
-  width: 35%;
+  width: 40%;
   min-height: 80vh;
   max-height: 825px;
   display: flex;
-  justify-content: center;
+  gap: 20px;
+  align-items: center;
   margin: auto ;
+  flex-direction: column;
   margin-top: 40px;
   position: relative;
   bottom: 105vh;
@@ -344,6 +346,9 @@ template {
 
 .conteudoModal button{
   transition: transform 0.3s ease;
+  position: absolute;
+  right: 2%;
+  top: 5%;
 }
 
 .conteudoModal button:hover{
