@@ -337,6 +337,7 @@ template {
   margin: auto ;
   margin-top: 40px;
   position: relative;
+  bottom: 105vh;
   padding: 20px;
   border-radius: 25px;
 }
@@ -348,6 +349,16 @@ template {
 .conteudoModal button:hover{
   transform: scale(1.1);
 }
+
+
+// Horario/DivEstilizada/ContainerLinhaSol/sol
+
+#sol{
+  position: absolute;
+  top: -40px;
+}
+
+
 `
 
 export default EstilosGlobais

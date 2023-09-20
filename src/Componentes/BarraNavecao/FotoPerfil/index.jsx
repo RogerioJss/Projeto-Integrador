@@ -2,6 +2,7 @@ import { useState } from "react"
 import Modal from "../../Modal"
 import styled from "styled-components";
 import SVGS from "../../../SVGS/svgs";
+import ProfilePictureUpload from "../../Modal/ProfilePicture";
 
 
 const ButtonOpenModal = styled.button`

@@ -5,7 +5,12 @@ const CoresTemaEscuro = {
     corBordaInputs: 'rgba(0, 0, 0, 0.50)',
     corTextos: '#746E5B',
     corHover: 'rgb(255, 255, 255)',
-    corTitulos: '#575038'
+    corTitulos: '#575038',
+    corStatusOn: 'green',
+    corStatusOff: '#0C3659',
+    corStatusAlert: 'yellow',
+    corStatusError: 'red'
+
 }
 
 export default CoresTemaEscuro;
