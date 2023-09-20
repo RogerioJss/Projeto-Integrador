@@ -5,6 +5,7 @@ const CoresTemaEscuro = {
     corBordaInputs: 'rgba(0, 0, 0, 0.50)',
     corTextos: '#746E5B',
     corHover: 'rgb(255, 255, 255)',
+    corTitulos: '#575038'
 }
 
 export default CoresTemaEscuro;

@@ -4,6 +4,8 @@ import CoresTemaEscuro from "/src/colors/cores.js"
 
 
 const EstilosGlobais = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -17,6 +19,7 @@ html {
 body {
   margin: 0;
   background-color: ${CoresTemaEscuro.corDeFundo};
+  font-family: 'Inder', sans-serif;
 }
 
 main {
@@ -287,6 +290,64 @@ template {
   height: 50px !important;
 }
   
+/* Profile Picture*/
+.dropzone {
+  color: ${CoresTemaEscuro.corTextos} ; 
+  background-color: ${CoresTemaEscuro.corDivs};
+  border-radius: 50%;
+  font-size: 20px;
+  text-align: center;
+  height: 184px;
+  max-width: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid ;
+  transition: transform 0.3s ease;
+}
+
+.dropzone:hover{
+  transform: scale(1.1);
+}
+
+.image-preview img{
+  width: 215px;
+  height: 188px;
+  border-radius: 50%;
+  border: 2px solid;
+}
+
+.image-preview{
+  transition: transform 0.5s ease;
+}
+
+.image-preview:hover{
+  transform: scale(1.0);
+}
+
+//Modal
+
+.conteudoModal{
+  background-color: ${CoresTemaEscuro.corDivs};
+  width: 35%;
+  min-height: 80vh;
+  max-height: 825px;
+  display: flex;
+  justify-content: center;
+  margin: auto ;
+  margin-top: 40px;
+  position: relative;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.conteudoModal button{
+  transition: transform 0.3s ease;
+}
+
+.conteudoModal button:hover{
+  transform: scale(1.1);
+}
 `
 
 export default EstilosGlobais

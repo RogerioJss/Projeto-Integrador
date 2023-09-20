@@ -10,6 +10,7 @@ const SVGS = {
     IconRelatorioDesativado: "/src/assets/icons/Icon-Relatorio-Desativado.svg",
     IconNotificacaoAtivado: "/src/assets/icons/Icon-Notificacao-Ativado.svg",
     IconNotificacaoDesativado: "/src/assets/icons/Icon-Notificacao-Desativado.svg",
+    IconeFecharModal: "/src/assets/icons/Icon-Fechar-Modal.svg",
 }
 
 export default SVGS

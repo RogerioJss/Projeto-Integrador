@@ -5,6 +5,7 @@ import SVGS from "../../SVGS/svgs"
 import { useState } from "react"
 import Pefil from "./FotoPerfil"
 
+
 const HeaderEstilizado = styled.header`
     background-color: ${CoresTemaEscuro.corDivs};
 `
@@ -34,7 +35,7 @@ const Header = () => {
                 break;
         }
     }
-    
+
     return(
         <HeaderEstilizado>
             <ItemNavegacao src={itemRelatorioAtivado ? SVGS.IconRelatorioAtivado : SVGS.IconRelatorioDesativado} id={"itemRelatorio"} className={"itemNavecacao"} onClick={()=> ativarItem("relatorio")}/>
