@@ -9,8 +9,9 @@ const CoresTemaEscuro = {
     corStatusOn: 'green',
     corStatusOff: '#0C3659',
     corStatusAlert: 'yellow',
-    corStatusError: 'red'
-
+    corStatusError: 'red',
+    corVerdePositivo: '#00875F',
+    corVermelhoNegativo: 'red'
 }
 
 export default CoresTemaEscuro;

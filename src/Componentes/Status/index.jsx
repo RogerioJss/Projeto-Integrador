@@ -55,11 +55,11 @@ const StyleStatus = (status) =>{
     }
 }
 
-const Status = ({status}) => {
+const Status = ({status, children}) => {
     const {text, color} = StyleStatus(status);
     return(
         <ContainerStatus >
-                <H1Estilizado>Status:  </H1Estilizado>
+                <H1Estilizado>{children}  </H1Estilizado>
                 <DivStatus color={color}>{text}</DivStatus>
         </ContainerStatus>
     )

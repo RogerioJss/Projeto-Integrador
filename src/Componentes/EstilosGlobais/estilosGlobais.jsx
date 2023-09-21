@@ -355,7 +355,6 @@ template {
   transform: scale(1.1);
 }
 
-
 // Horario/DivEstilizada/ContainerLinhaSol/sol
 
 #sol{
@@ -364,6 +363,38 @@ template {
 }
 
 
+//ModaltTerreiroConteudo
+.modalTerreiroConteudo{
+  background-color: ${CoresTemaEscuro.corDivs};
+  max-width: 720px;
+  max-height: 628px;
+  min-width: 526px ;
+  min-height: 585px;
+  width: 70%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:67px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: -10%;
+  left: 29%;
+}
+.modalTerreiroConteudo button{
+  width: 50%;
+  height: 15%;
+  min-width: 233px;
+  min-height: 100px;
+  color: ${CoresTemaEscuro.corVerdePositivo};
+  border: 2px solid ${CoresTemaEscuro.corVerdePositivo};
+  transition: transform 0.3s ease;
+}
+
+.modalTerreiroConteudo button:hover{
+  transform: scale(1.1);
+}
 `
 
 export default EstilosGlobais

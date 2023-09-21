@@ -14,14 +14,25 @@ const ContainerLinhaSol = styled.div`
     flex-direction: column;
 `
 
+const ContainerSH = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 10px;
+`
+
 const Horario = ()  => {
     return(
         <DivEstilizada>
             <ContainerLinhaSol>
                 <img src={SVGS.Linha} alt="" id="linha" />
                 <img src={SVGS.Sol} alt="" id="sol" />
+                <ContainerSH>
                     <HorarioAtual/>
-                    <Status status="ON"/>
+                    <Status status="ON">Status:</Status>
+                </ContainerSH>
+                    
             </ContainerLinhaSol>
         </DivEstilizada>
     )

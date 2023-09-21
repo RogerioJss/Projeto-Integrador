@@ -10,8 +10,14 @@ const HeaderEstilizado = styled.header`
     background-color: ${CoresTemaEscuro.corDivs};
     min-height: 130px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 30px;
+`
+
+const ItensContainer = styled.div`
+    display: flex;
+    gap: 114px;
 `
 
 const Header = () => {
@@ -43,10 +49,11 @@ const Header = () => {
     return(
         <HeaderEstilizado>
             <Pefil/>
-            <ItemNavegacao src={itemRelatorioAtivado ? SVGS.IconRelatorioAtivado : SVGS.IconRelatorioDesativado} id={"itemRelatorio"} className={"itemNavecacao"} onClick={()=> ativarItem("relatorio")}/>
-            <ItemNavegacao src={itemHomeAtivado ? SVGS.IconHomeAtivado : SVGS.IconHomeDesativado} id={"itemHome"} className={"itemNavecacao"} onClick={() => ativarItem("home")}/>
-            <ItemNavegacao src={itemNotificacaoAtivado ? SVGS.IconNotificacaoAtivado : SVGS.IconNotificacaoDesativado} id={"itemNotificacao"} className={"itemNavecacao"} onClick={() => ativarItem("notificacao")}/>
-
+            <ItensContainer>
+                <ItemNavegacao src={itemRelatorioAtivado ? SVGS.IconRelatorioAtivado : SVGS.IconRelatorioDesativado} id={"itemRelatorio"} className={"itemNavecacao"} onClick={()=> ativarItem("relatorio")}/>
+                <ItemNavegacao src={itemHomeAtivado ? SVGS.IconHomeAtivado : SVGS.IconHomeDesativado} id={"itemHome"} className={"itemNavecacao"} onClick={() => ativarItem("home")}/>
+                <ItemNavegacao src={itemNotificacaoAtivado ? SVGS.IconNotificacaoAtivado : SVGS.IconNotificacaoDesativado} id={"itemNotificacao"} className={"itemNavecacao"} onClick={() => ativarItem("notificacao")}/>
+            </ItensContainer>
         </HeaderEstilizado>
     )
 }

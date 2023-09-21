@@ -22,6 +22,7 @@ const CaixasTexto = styled.input`
 const InputText = ({placeholder,type,id }) => {
     return( 
         <CaixasTexto type = {type} placeholder={placeholder} id={id}/>
+          
     )
 }
 
