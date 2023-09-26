@@ -11,6 +11,10 @@ const ButtonEstilizado = styled.button`
     font-size: 40px;
     border-radius: 20px;
     border: 2px solid ${(props) => props.borderColor };
+    transition: transform 0.3s ease;
+    &:hover{
+        transform: scale(1.1);
+    }
 `
 
 

@@ -11,7 +11,8 @@ const CoresTemaEscuro = {
     corStatusAlert: 'yellow',
     corStatusError: 'red',
     corVerdePositivo: '#00875F',
-    corVermelhoNegativo: 'red'
+    corVermelhoNegativo: 'red',
+    corDivStatusArduino: '#29292E'
 }
 
 export default CoresTemaEscuro;

@@ -11,6 +11,10 @@ const ButtonMostrarSenhaEstilizado = styled.button`
     padding: 0;
     margin: 0;
     outline: none;
+    transition: transform 0.3s ease;
+    &:hover{
+        transform: scale(1.1);
+    }
 `
 
 const ButtonMostrarSenha = ({onClick,src,id,className}) => {

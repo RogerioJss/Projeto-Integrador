@@ -389,12 +389,23 @@ template {
   min-height: 100px;
   color: ${CoresTemaEscuro.corVerdePositivo};
   border: 2px solid ${CoresTemaEscuro.corVerdePositivo};
-  transition: transform 0.3s ease;
+  text-align: center;
 }
 
-.modalTerreiroConteudo button:hover{
-  transform: scale(1.1);
+
+//Modal controle
+.modalControleConteudo{
+  display: flex;
+  flex-direction: column;
+  background-color: ${CoresTemaEscuro.corDivs};
+  align-items: center;
+  width: 60%;
+  margin: auto;
+  gap: 33px;
+  padding: 15px;
+  border-radius: 20px;
 }
+
 `
 
 export default EstilosGlobais

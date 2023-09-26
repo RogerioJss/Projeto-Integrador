@@ -45,7 +45,7 @@ const StyleStatus = (status) =>{
         case "ERROR":
             return{
                 text:"ERROR",
-                color: CoresTemaEscuro.corStatusOff
+                color: CoresTemaEscuro.corStatusError
             }
         default:
             return {

@@ -49,7 +49,7 @@ const Conteudo = () => {
         <Button className="button" id="button1" onClick={openModal}>Adicionar Terreiro</Button>
         <ModalAddTerreiro stateOpen={modalOpen} stateClose={closeModal} closeModal={closeModal} idExterno="modalTerreiroExterno" idConteudo="modalTerreiroConteudo" fecharComCliqueDeFora={false}/>
         <Button className="button" id="button2" onClick={openModal1}>Controlar Estações</Button>
-        <ModalControle stateOpen1={modalOpen1} stateClose1={closeModal1} closeModal1={closeModal1} idExterno1="modalControleExterno" idConteudo1="modalControleConteudo" fecharComCliqueDeFora1={false} status1="DESLIGAR"/>
+        <ModalControle stateOpen1={modalOpen1} stateClose1={closeModal1} closeModal1={closeModal1} idExterno1="modalControleExterno" idConteudo1="modalControleConteudo" fecharComCliqueDeFora1={false} status1="LIGAR"/>
     </ConteudoEstilizado>
     )
 }
