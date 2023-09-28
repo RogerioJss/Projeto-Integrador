@@ -2,13 +2,13 @@ import styled from "styled-components"
 import CoresTemaEscuro from "../../Colors/cores"
 
 const ButtonEstilizado = styled.button`
-    background-color: ${CoresTemaEscuro.corDivs};
+    background-color: ${(props) => props.backgroud || CoresTemaEscuro.corBackgroundBotoes};
     width: 40%;
     height: 60%;
     max-width: 400px;
     min-height: 100px;
-    color: ${(props) => props.color || CoresTemaEscuro.corTextos};
-    font-size: 40px;
+    color: ${(props) => props.color || CoresTemaEscuro.corTextoBotoes};
+    font-size: 30px;
     border-radius: 20px;
     border: 2px solid ${(props) => props.borderColor };
     transition: transform 0.3s ease;
@@ -18,9 +18,9 @@ const ButtonEstilizado = styled.button`
 `
 
 
-const Button = ({children,onClick, className,id,borderColor,color}) => {
+const Button = ({children,onClick, className,id,borderColor,color, backgroud}) => {
     return(
-    <ButtonEstilizado onClick={onClick} className={className} id={id} borderColor={borderColor} color={color} >
+    <ButtonEstilizado onClick={onClick} className={className} id={id} borderColor={borderColor} color={color} backgroud={backgroud}>
         {children}
     </ButtonEstilizado>
     )

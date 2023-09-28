@@ -292,8 +292,8 @@ template {
   
 /* Profile Picture*/
 .dropzone {
-  color: ${CoresTemaEscuro.corTextos} ; 
-  background-color: ${CoresTemaEscuro.corDivs};
+  color: ${CoresTemaEscuro.corBackgroundBotoes} ; 
+  background-color: white;
   border-radius: 50%;
   font-size: 20px;
   text-align: center;
@@ -302,8 +302,9 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid ;
+  border: 2px solid black ;
   transition: transform 0.3s ease;
+
 }
 
 .dropzone:hover{
@@ -328,7 +329,7 @@ template {
 //Modal
 
 .conteudoModal{
-  background-color: ${CoresTemaEscuro.corDivs};
+  background-color: white;
   width: 40%;
   min-height: 80vh;
   max-height: 825px;
@@ -342,6 +343,7 @@ template {
   bottom: 105vh;
   padding: 20px;
   border-radius: 25px;
+  border: 2x solid ${CoresTemaEscuro.corBackgroundBotoes} !important;
 }
 
 .conteudoModal button{
@@ -363,9 +365,10 @@ template {
 }
 
 
+
 //ModaltTerreiroConteudo
 .modalTerreiroConteudo{
-  background-color: ${CoresTemaEscuro.corDivs};
+  background-color: white;
   max-width: 720px;
   max-height: 628px;
   min-width: 526px ;
@@ -397,13 +400,44 @@ template {
 .modalControleConteudo{
   display: flex;
   flex-direction: column;
-  background-color: ${CoresTemaEscuro.corDivs};
+  background-color: white;
   align-items: center;
   width: 60%;
   margin: auto;
   gap: 33px;
   padding: 15px;
   border-radius: 20px;
+  border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
+}
+
+// controle individual
+
+.controleIndividualConteudo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 60%;
+  gap: 70px;
+  border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
+  border-radius: 15px;
+}
+
+
+// Modal Confirmar Apagar
+
+.modalConfirmarApagar{
+  background-color: white;
+  border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
+  width: 40%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  gap: 35px !important;
 }
 
 `

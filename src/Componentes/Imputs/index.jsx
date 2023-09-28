@@ -9,7 +9,7 @@ const CaixasTexto = styled.input`
     border-radius: 7px;
     border: 1px solid ${CoresTemaEscuro.corBordaInputs};
     background: ${CoresTemaEscuro.corInputs};
-    color: ${CoresTemaEscuro.corTextos};
+    color: ${CoresTemaEscuro.corTextoBotoes};
     text-align: center;
     font-family: Inter;
     font-size: 22px;

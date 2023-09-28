@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const DivLogin = styled.div`
-    background-color: ${CoresTemaEscuro.corDivs};
+    background-color: #F4F4F4;
     width: 55vw;
     height: 95vh;
     display: flex;
@@ -30,12 +30,12 @@ const DivLogin = styled.div`
     }
 
     a{
+        color: #04764E;
         transition: transform 0.3s ease;
     }
 
     a:hover{
         transform: scale(1.1);
-        color: ${CoresTemaEscuro.corHover};
     }
 
     img{
@@ -55,6 +55,12 @@ const DivEstilizada = styled.div`
    position: relative;
 `
 
+const ContainerLogo = styled.div`
+    background-color: ${CoresTemaEscuro.corBackgroundBotoes};
+    width: 100%;
+    text-align: center;
+`   
+
 
 
 const Login = () => {
@@ -65,7 +71,10 @@ const Login = () => {
     };
     return(
     <DivLogin>
-        <img src="/src/assets/logo.png" alt="" />
+        <ContainerLogo>
+             <img src="/src/assets/logo.png" alt="" />
+        </ContainerLogo>
+       
         <DivEstilizada>
             <InputText placeholder={"Digite seu email"} type={"email"}/>
             <IconeInput src={SVGS.UserIcon} id={"userIcon"} className={"icones"} /> 

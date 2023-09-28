@@ -4,6 +4,7 @@ import ContainerConteudo from "../ContainerConteudo"
 import ModalAddTerreiro from "../ModalAddTerreiro"
 import { useState } from "react"
 import ModalControle from "../ModalControleEstacoes"
+import CoresTemaEscuro from "../../Colors/cores"
 
 const ConteudoEstilizado = styled.section`
     position: relative;
@@ -12,15 +13,9 @@ const ConteudoEstilizado = styled.section`
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    
-
-    button{
-        transition: transform 0.3s ease;
-    }
-
-    button:hover{
-        transform: scale(1.1);
-    }
+    border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
+    border-radius: 10px;
+    width: 50%;
 `
 
 const Conteudo = () => {

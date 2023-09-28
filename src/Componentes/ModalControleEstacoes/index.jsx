@@ -4,6 +4,7 @@ import CoresTemaEscuro from "../../Colors/cores"
 import Status from "../Status"
 import InputText from "../Imputs"
 import ArduinoStatus from "./ArduinoStatus"
+import ModalControleIndividual from "../ModalControleIndividual"
 
 const StyleBotton = (status1) => {
     switch(status1){
@@ -11,20 +12,22 @@ const StyleBotton = (status1) => {
             return{
                 children: "Ligar Todos",
                 borderColor: CoresTemaEscuro.corVerdePositivo,
-                color: CoresTemaEscuro.corVerdePositivo,
+                color: CoresTemaEscuro.corTextoBotoes,
+                background: CoresTemaEscuro.corBackgroundBotoes
             }
         case "DESLIGAR":
             return{
                 children: "Desligar Todos",
                 borderColor: CoresTemaEscuro.corVermelhoNegativo,
-                color: CoresTemaEscuro.corVermelhoNegativo,
+                color: CoresTemaEscuro.corTextoBotoes,
+                background: CoresTemaEscuro.corStatusError
             }
     }
 }
 
 
 const ModalControle = ({stateOpen1, stateClose1,closeModal1, idExterno1, idConteudo1, fecharComCliqueDeFora1,status1}) => {
-    const {children, borderColor, color} = StyleBotton(status1);
+    const {children, borderColor, color,background} = StyleBotton(status1);
     return(
         
         <ReactModal isOpen={stateOpen1}
@@ -38,7 +41,7 @@ const ModalControle = ({stateOpen1, stateClose1,closeModal1, idExterno1, idConte
                     <ArduinoStatus status="OFF">3A</ArduinoStatus>
                     <ArduinoStatus status="ALERT">5A</ArduinoStatus>
                     <ArduinoStatus status="ERROR">8A</ArduinoStatus>
-                    <Button onClick={closeModal1} borderColor={borderColor} color={color} >{children}</Button>
+                    <Button onClick={closeModal1} borderColor={borderColor} color={color}  backgroud={background}>{children}</Button>
         </ReactModal>
 
     )

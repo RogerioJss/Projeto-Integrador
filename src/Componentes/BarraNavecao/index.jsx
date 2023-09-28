@@ -7,7 +7,7 @@ import Pefil from "./FotoPerfil"
 
 
 const HeaderEstilizado = styled.header`
-    background-color: ${CoresTemaEscuro.corDivs};
+    background-color: ${CoresTemaEscuro.corBackgroundBotoes};
     min-height: 130px;
     display: flex;
     justify-content: space-between;
@@ -21,38 +21,17 @@ const ItensContainer = styled.div`
 `
 
 const Header = () => {
-    const [itemHomeAtivado,setItemHomeAtivado] = useState(true)
-    const [itemRelatorioAtivado,setItemRelatorioAtivado] = useState(false)
-    const [itemNotificacaoAtivado,setItemNotificacaoAtivado] = useState(false)
-    const ativarItem = (item) => {
-        switch (item) {
-            case "relatorio":
-                setItemRelatorioAtivado(true);
-                setItemHomeAtivado(false); // Desativando outros itens
-                setItemNotificacaoAtivado(false);
-                break;
-            case "home":
-                setItemRelatorioAtivado(false);
-                setItemHomeAtivado(true);
-                setItemNotificacaoAtivado(false);
-                break;
-            case "notificacao":
-                setItemRelatorioAtivado(false);
-                setItemHomeAtivado(false);
-                setItemNotificacaoAtivado(true);
-                break;
-            default:
-                break;
-        }
-    }
+    const [itemNotificacaoAtivado,setItemNotificacaoAtivado] = useState(true)
+   function AtivarRelatorio(){
+        setItemNotificacaoAtivado(!itemNotificacaoAtivado)
+   }
+       
 
     return(
         <HeaderEstilizado>
             <Pefil/>
             <ItensContainer>
-                <ItemNavegacao src={itemRelatorioAtivado ? SVGS.IconRelatorioAtivado : SVGS.IconRelatorioDesativado} id={"itemRelatorio"} className={"itemNavecacao"} onClick={()=> ativarItem("relatorio")}/>
-                <ItemNavegacao src={itemHomeAtivado ? SVGS.IconHomeAtivado : SVGS.IconHomeDesativado} id={"itemHome"} className={"itemNavecacao"} onClick={() => ativarItem("home")}/>
-                <ItemNavegacao src={itemNotificacaoAtivado ? SVGS.IconNotificacaoAtivado : SVGS.IconNotificacaoDesativado} id={"itemNotificacao"} className={"itemNavecacao"} onClick={() => ativarItem("notificacao")}/>
+                <ItemNavegacao src={itemNotificacaoAtivado ? SVGS.IconNotificacaoAtivado : SVGS.IconNotificacaoDesativado} id={"itemNotificacao"} className={"itemNavecacao"} onClick={AtivarRelatorio}/>
             </ItensContainer>
         </HeaderEstilizado>
     )

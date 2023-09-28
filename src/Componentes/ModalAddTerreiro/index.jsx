@@ -13,7 +13,7 @@ const ModalContainer = styled.div`
     
 `
 const TituloEstilizado = styled.h1`
-    color: ${CoresTemaEscuro.corTextos};
+    color: ${CoresTemaEscuro.corBackgroundBotoes};
     font-size: 50px;
 
 `
@@ -23,6 +23,10 @@ const InputContainer = styled.div`
     gap: 10px;
 
 `
+const ParagrafoEstilizado = styled.p`
+    color: ${CoresTemaEscuro.corTextoBotoes};
+    font-size: 30px;
+`
 const ModalAddTerreiro = ({stateOpen, stateClose,closeModal, idExterno, idConteudo, fecharComCliqueDeFora}) => {
     return(
         <ModalContainer>
@@ -30,14 +34,15 @@ const ModalAddTerreiro = ({stateOpen, stateClose,closeModal, idExterno, idConteu
                     onRequestClose={stateClose}
                     overlayClassName={idExterno}
                     className={idConteudo}
-                    shouldCloseOnOverlayClick={fecharComCliqueDeFora}>
+                    shouldCloseOnOverlayClick={fecharComCliqueDeFora}
+                    >
                 <TituloEstilizado>Add. Terreiros</TituloEstilizado>
                 <InputContainer>
                    <InputText placeholder="Nome do Terreiro"/>
                    <InputText placeholder="Ip do Terreiro"/>
                 </InputContainer>   
-                <Button onClick={closeModal}>
-                    Adicionar
+                <Button onClick={closeModal} color={CoresTemaEscuro.corTextoBotoes}>
+                        <ParagrafoEstilizado>Adicionar</ParagrafoEstilizado>
                 </Button>  
             </ReactModal>
         </ModalContainer>
