@@ -408,6 +408,9 @@ template {
   padding: 15px;
   border-radius: 20px;
   border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
+  position: relative;
+  top: -90vh;
+  margin: auto;
 }
 
 // controle individual
@@ -422,22 +425,31 @@ template {
   gap: 70px;
   border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
   border-radius: 15px;
+  position: relative;
+  margin: auto;
+  top: -190vh;
+  padding: 15px;
 }
 
 
 // Modal Confirmar Apagar
 
-.modalConfirmarApagar{
+.modalConfirmarApagarConteudo{
   background-color: white;
   border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
   width: 40%;
   border-radius: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  text-align: center;
   padding: 30px;
-  gap: 35px !important;
+  margin: auto;
+  position: relative;
+  top: -250vh;
+  z-index: 2;
+  gap: 30px;
 }
 
 `

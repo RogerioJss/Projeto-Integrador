@@ -29,7 +29,7 @@ const ModalControleIndividual = ({stateOpen, stateClose,closeModal, idExterno, i
                     onRequestClose={stateClose}
                     overlayClassName={idExterno}
                     className={idConteudo}
-                    shouldCloseOnOverlayClick={fecharComCliqueDeFora}>
+                    shouldCloseOnEsc={fecharComCliqueDeFora}>
                 <TituloEstilizado>1A</TituloEstilizado>
                 <Status status="ON">Status</Status>
                 <Switch/>

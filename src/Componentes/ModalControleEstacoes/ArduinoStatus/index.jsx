@@ -33,13 +33,15 @@ const ArduinoStatus  = ({status,children}) => {
 
     function closeControleIndividual(){
         setModalOpen(false)
+        
     }
     return(
         <ArduinoStatusContainer>
             <H1Estilizado>{children}</H1Estilizado>
             <Status status={status}/>
             <ButtonMostrarSenha src={SVGS.IconeAbrirArduino} onClick={openControleIndividual}/>
-            <ModalControleIndividual stateOpen={openModal} stateClose={closeControleIndividual} closeModal={closeControleIndividual} idExterno="controleIndividual" idConteudo="controleIndividualConteudo" fecharComCliqueDeFora={true}/>
+            <ModalControleIndividual stateOpen={openModal} stateClose={closeControleIndividual} closeModal={closeControleIndividual} 
+            idExterno="controleIndividual" idConteudo="controleIndividualConteudo" fecharComCliqueDeFora={true}/>
         </ArduinoStatusContainer>
     )
 }

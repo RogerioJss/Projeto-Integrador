@@ -3,7 +3,13 @@ import Button from "../Button"
 import CoresTemaEscuro from "../../Colors/cores"
 import TextosSuperiores from "../Textos"
 import TextosInferiores from "../Textos/TextosInferiores"
+import styled from "styled-components"
 
+const ButtonContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+`
 
 const ModalConfirmarApagar = ({stateOpen1, stateClose1,closeModal1, idExterno1, idConteudo1,fecharComCliqueDeFora1}) => {
     return(
@@ -15,8 +21,10 @@ const ModalConfirmarApagar = ({stateOpen1, stateClose1,closeModal1, idExterno1, 
                     >
                     <TextosSuperiores>Deseja mesmo apagar?</TextosSuperiores>
                     <TextosInferiores>O Terreno será apagado para SEMPRE!!</TextosInferiores>
-                    <Button onClick={closeModal1} >Sim</Button>
-                    <Button onClick={closeModal1} backgroud={CoresTemaEscuro.corStatusError} >Não</Button>
+                    <ButtonContainer>
+                        <Button onClick={closeModal1} >Sim</Button>
+                        <Button onClick={closeModal1} backgroud={CoresTemaEscuro.corStatusError} >Não</Button>
+                    </ButtonContainer>
         </ReactModal>
     )
 }
