@@ -26,12 +26,11 @@ const StyleBotton = (status1) => {
 }
 
 
-const ModalControle = ({stateOpen1, stateClose1,closeModal1, idExterno1, idConteudo1, fecharComCliqueDeFora1,status1}) => {
+const ModalControle = ({stateOpen1, idExterno1, idConteudo1, fecharComCliqueDeFora1,status1}) => {
     const {children, borderColor, color,background} = StyleBotton(status1);
     return(
         
         <ReactModal isOpen={stateOpen1}
-                    onRequestClose={stateClose1}
                     overlayClassName={idExterno1}
                     className={idConteudo1}
                     shouldCloseOnOverlayClick={fecharComCliqueDeFora1}
@@ -41,7 +40,8 @@ const ModalControle = ({stateOpen1, stateClose1,closeModal1, idExterno1, idConte
                     <ArduinoStatus status="OFF">3A</ArduinoStatus>
                     <ArduinoStatus status="ALERT">5A</ArduinoStatus>
                     <ArduinoStatus status="ERROR">8A</ArduinoStatus>
-                    <Button onClick={closeModal1} borderColor={borderColor} color={color}  backgroud={background}>{children}</Button>
+                    <Button  borderColor={borderColor} color={color}  backgroud={background}
+                    width="40%" heigth="10%" mimHeight="70px">{children}</Button>
         </ReactModal>
 
     )

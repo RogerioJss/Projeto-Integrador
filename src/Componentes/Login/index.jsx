@@ -19,6 +19,9 @@ const DivLogin = styled.div`
     justify-content: center;
     gap: 33px;
     margin: auto;
+    border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
+    border-radius: 10px;
+    padding: 0 0 15px;
    
     button{
         transition: transform 0.3s ease;
@@ -43,13 +46,8 @@ const DivLogin = styled.div`
         height: 233px;
     }
 
-    div{
-        transition: transform 0.3s ease;
-    }
-
-    div:hover{
-        transform: scale(1.1);
-    }
+    
+   
 `
 const DivEstilizada = styled.div`
    position: relative;
@@ -59,6 +57,7 @@ const ContainerLogo = styled.div`
     background-color: ${CoresTemaEscuro.corBackgroundBotoes};
     width: 100%;
     text-align: center;
+    height: 50vh;
 `   
 
 

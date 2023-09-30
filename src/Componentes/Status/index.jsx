@@ -19,7 +19,7 @@ const DivStatus = styled.div`
     color: white;
     border-radius: 10px;
     min-width: 185px;
-    height: 84px;
+    height: ${props => props.height || '84px'};
     text-align: center;
     display: flex;
     justify-content: center;
@@ -55,12 +55,12 @@ const StyleStatus = (status) =>{
     }
 }
 
-const Status = ({status, children}) => {
+const Status = ({status, children,height}) => {
     const {text, color} = StyleStatus(status);
     return(
         <ContainerStatus >
                 <H1Estilizado>{children}  </H1Estilizado>
-                <DivStatus color={color}>{text}</DivStatus>
+                <DivStatus height={height} color={color}>{text}</DivStatus>
         </ContainerStatus>
     )
 }

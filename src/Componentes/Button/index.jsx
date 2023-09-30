@@ -3,10 +3,10 @@ import CoresTemaEscuro from "../../Colors/cores"
 
 const ButtonEstilizado = styled.button`
     background-color: ${(props) => props.backgroud || CoresTemaEscuro.corBackgroundBotoes};
-    width: 40%;
-    height: 60%;
+    width: ${props => props.width || "40%"};
+    height: ${props => props.heigth || "60%"};
     max-width: 400px;
-    min-height: 100px;
+    min-height: ${props => props.mimHeight || "100px"};
     color: ${(props) => props.color || CoresTemaEscuro.corTextoBotoes};
     font-size: 30px;
     border-radius: 20px;
@@ -18,9 +18,10 @@ const ButtonEstilizado = styled.button`
 `
 
 
-const Button = ({children,onClick, className,id,borderColor,color, backgroud}) => {
+const Button = ({children,onClick, className,id,borderColor,color, backgroud,width,heigth,mimHeight}) => {
     return(
-    <ButtonEstilizado onClick={onClick} className={className} id={id} borderColor={borderColor} color={color} backgroud={backgroud}>
+    <ButtonEstilizado onClick={onClick} className={className} id={id} borderColor={borderColor} color={color} backgroud={backgroud}
+    width={width} heigth={heigth} mimHeight={mimHeight}>
         {children}
     </ButtonEstilizado>
     )

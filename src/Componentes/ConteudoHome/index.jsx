@@ -16,6 +16,9 @@ const ConteudoEstilizado = styled.section`
     border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
     border-radius: 10px;
     width: 50%;
+    height: 77vh;
+    top: 1vh;
+    padding-bottom: 40px;
 `
 
 const Conteudo = () => {
@@ -29,22 +32,19 @@ const Conteudo = () => {
         setModalClose(false);
     }
 
-    const [modalOpen1, setModalClose1] = useState(false);
+    const [modalOpen1, setModalClose1] = useState(true);
 
-    function openModal1(){
-        setModalClose1(true);
-    }
+ 
 
-    function closeModal1(){
-        setModalClose1(false);
-    }
+   
     return(
     <ConteudoEstilizado>
         <ContainerConteudo/>
-        <Button className="button" id="button1" onClick={openModal}>Adicionar Terreiro</Button>
-        <ModalAddTerreiro stateOpen={modalOpen} stateClose={closeModal} closeModal={closeModal} idExterno="modalTerreiroExterno" idConteudo="modalTerreiroConteudo" fecharComCliqueDeFora={false}/>
-        <Button className="button" id="button2" onClick={openModal1}>Controlar Estações</Button>
-        <ModalControle stateOpen1={modalOpen1} stateClose1={closeModal1} closeModal1={closeModal1} idExterno1="modalControleExterno" idConteudo1="modalControleConteudo" fecharComCliqueDeFora1={false} status1="LIGAR"/>
+        <Button className="button" id="button1" onClick={openModal} heigth="29%" mimHeight="80px">Adicionar Terreiro</Button>
+        <ModalAddTerreiro stateOpen={modalOpen} stateClose={closeModal} closeModal={closeModal} idExterno="modalTerreiroExterno" 
+        idConteudo="modalTerreiroConteudo" fecharComCliqueDeFora={false}/>
+        <ModalControle stateOpen1={modalOpen1}  idExterno1="modalControleExterno" idConteudo1="modalControleConteudo" 
+        fecharComCliqueDeFora1={false} status1="LIGAR"/>
     </ConteudoEstilizado>
     )
 }

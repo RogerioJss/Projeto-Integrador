@@ -12,6 +12,7 @@ const ContainerLinhaSol = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    top: 50px;
 `
 
 const ContainerSH = styled.div`

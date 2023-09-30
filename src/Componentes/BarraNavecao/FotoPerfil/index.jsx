@@ -8,9 +8,8 @@ import SVGS from "../../../SVGS/svgs";
 const ButtonOpenModal = styled.button`
     border-radius: 50%;
     text-align: center;
-    height: 184px;
-    max-width: 210px;
-    min-width: 190px;
+    height: 80px;
+    width: 80px;
     justify-content: center;
     align-items: center;
     border: 2px solid ;

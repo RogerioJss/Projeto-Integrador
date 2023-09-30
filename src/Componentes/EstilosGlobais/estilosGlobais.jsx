@@ -340,7 +340,7 @@ template {
   flex-direction: column;
   margin-top: 40px;
   position: relative;
-  bottom: 105vh;
+  bottom: 82vh;
   padding: 20px;
   border-radius: 25px;
   border: 2x solid ${CoresTemaEscuro.corBackgroundBotoes} !important;
@@ -382,8 +382,9 @@ template {
   gap:67px;
   border-radius: 20px;
   position: absolute;
-  bottom: -10%;
+  bottom: 5%;
   left: 29%;
+  z-index: 3;
 }
 .modalTerreiroConteudo button{
   width: 50%;
@@ -402,15 +403,16 @@ template {
   flex-direction: column;
   background-color: white;
   align-items: center;
-  width: 60%;
-  margin: auto;
+  width: 40%;
   gap: 33px;
   padding: 15px;
   border-radius: 20px;
   border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
-  position: relative;
-  top: -90vh;
+  position: absolute;
+  top: 16.5vh;
   margin: auto;
+  height: 83vh;
+  left: 56%;
 }
 
 // controle individual
@@ -421,13 +423,14 @@ template {
   justify-content: center;
   align-items: center;
   background-color: white;
-  width: 60%;
+  width: 40%;
   gap: 70px;
   border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
   border-radius: 15px;
-  position: relative;
+  position: absolute;
   margin: auto;
-  top: -190vh;
+  left: 30%;
+  top: 16vh;
   padding: 15px;
 }
 
@@ -446,8 +449,9 @@ template {
   text-align: center;
   padding: 30px;
   margin: auto;
-  position: relative;
-  top: -250vh;
+  position: absolute;
+  left: 30%;
+  top: 33vh;
   z-index: 2;
   gap: 30px;
 }

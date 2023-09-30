@@ -16,6 +16,7 @@ const ArduinoStatusContainer = styled.div`
     width: 60%;
     padding: 23px;
     border: 2px solid ;
+    height: 80px;
 `
 
 const H1Estilizado = styled.h1`
@@ -38,7 +39,7 @@ const ArduinoStatus  = ({status,children}) => {
     return(
         <ArduinoStatusContainer>
             <H1Estilizado>{children}</H1Estilizado>
-            <Status status={status}/>
+            <Status height="50px" status={status}/>
             <ButtonMostrarSenha src={SVGS.IconeAbrirArduino} onClick={openControleIndividual}/>
             <ModalControleIndividual stateOpen={openModal} stateClose={closeControleIndividual} closeModal={closeControleIndividual} 
             idExterno="controleIndividual" idConteudo="controleIndividualConteudo" fecharComCliqueDeFora={true}/>

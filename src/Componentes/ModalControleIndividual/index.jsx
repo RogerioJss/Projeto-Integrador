@@ -33,8 +33,10 @@ const ModalControleIndividual = ({stateOpen, stateClose,closeModal, idExterno, i
                 <TituloEstilizado>1A</TituloEstilizado>
                 <Status status="ON">Status</Status>
                 <Switch/>
-                <Button onClick={openModal12} borderColor={CoresTemaEscuro.corVermelhoNegativo} color={CoresTemaEscuro.corTextoBotoes} backgroud={CoresTemaEscuro.corStatusError}>Apagar</Button>
-                <ModalConfirmarApagar  stateOpen1={modalOpen} stateClose1={closeModal12} closeModal1={closeModal12} idExterno1="modalConfirmarApagar" idConteudo1="modalConfirmarApagarConteudo" fecharComCliqueDeFora1={false}/>
+                <Button onClick={openModal12} borderColor={CoresTemaEscuro.corVermelhoNegativo} color={CoresTemaEscuro.corTextoBotoes} 
+                backgroud={CoresTemaEscuro.corStatusError}>Apagar</Button>
+                <ModalConfirmarApagar  stateOpen1={modalOpen} stateClose1={closeModal12} closeModal1={closeModal12} 
+                idExterno1="modalConfirmarApagar" idConteudo1="modalConfirmarApagarConteudo" fecharComCliqueDeFora1={false}/>
         </ReactModal>
     )
 }

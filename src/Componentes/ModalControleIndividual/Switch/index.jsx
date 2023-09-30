@@ -64,6 +64,7 @@ const SpanEstilizado = styled.span`
 const TituloEstizado = styled.h1`
     font-size: 30px;
     color: ${props => props.color};
+    opacity: ${props => props.opacity};
 `
 
 const Switch = () => {
@@ -72,14 +73,16 @@ const Switch = () => {
     const LigarDesligar = () => {
         setIsOn(!isOn)
     }
+   
+   
     return(
         <ContainerSwitchEstilizado>
-            <TituloEstizado color={CoresTemaEscuro.corStatusOn}>Ligado</TituloEstizado>   
+            <TituloEstizado color={CoresTemaEscuro.corStatusOn} opacity={isOn ? 0.5 : 1 }  >Ligado</TituloEstizado>   
             <SwitchEstilizado>
                 <ButtonEstilizado onClick={LigarDesligar} isOn={isOn}></ButtonEstilizado>
                 <SpanEstilizado></SpanEstilizado>
             </SwitchEstilizado>
-            <TituloEstizado color={CoresTemaEscuro.corStatusError}>Desligado</TituloEstizado>
+            <TituloEstizado color={CoresTemaEscuro.corStatusError} opacity={isOn ? 1 : 0.5} >Desligado</TituloEstizado>
         </ContainerSwitchEstilizado>
     )
 }
