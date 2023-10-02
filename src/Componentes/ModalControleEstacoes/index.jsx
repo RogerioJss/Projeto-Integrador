@@ -34,8 +34,9 @@ const ModalControle = ({stateOpen1, idExterno1, idConteudo1, fecharComCliqueDeFo
                     overlayClassName={idExterno1}
                     className={idConteudo1}
                     shouldCloseOnOverlayClick={fecharComCliqueDeFora1}
+                    id="modalControleGeral"
                     >
-                    <InputText type='text' placeholder="Pesquise o nome do arduino"/>
+                    <InputText type='text' placeholder="Pesquise o nome do arduino" width="90%"/>
                     <ArduinoStatus status="ON">1A</ArduinoStatus>
                     <ArduinoStatus status="OFF">3A</ArduinoStatus>
                     <ArduinoStatus status="ALERT">5A</ArduinoStatus>

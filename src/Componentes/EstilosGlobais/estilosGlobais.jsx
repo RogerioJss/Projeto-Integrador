@@ -331,19 +331,22 @@ template {
 .conteudoModal{
   background-color: white;
   width: 40%;
-  min-height: 80vh;
+  min-height: 85vh;
   max-height: 825px;
   display: flex;
   gap: 20px;
   align-items: center;
-  margin: auto ;
   flex-direction: column;
   margin-top: 40px;
-  position: relative;
+  position: absolute;
   bottom: 82vh;
   padding: 20px;
   border-radius: 25px;
   border: 2x solid ${CoresTemaEscuro.corBackgroundBotoes} !important;
+  left: 35%;
+  top: 6vh;
+  z-index: 2;
+  border: 3px solid ;
 }
 
 .conteudoModal button{
@@ -385,7 +388,10 @@ template {
   bottom: 5%;
   left: 29%;
   z-index: 3;
+  border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
 }
+
+
 .modalTerreiroConteudo button{
   width: 50%;
   height: 15%;
@@ -432,7 +438,9 @@ template {
   left: 30%;
   top: 16vh;
   padding: 15px;
+
 }
+
 
 
 // Modal Confirmar Apagar
@@ -454,6 +462,12 @@ template {
   top: 33vh;
   z-index: 2;
   gap: 30px;
+}
+
+//Opacidade das modais
+.modalOpacity{
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 `

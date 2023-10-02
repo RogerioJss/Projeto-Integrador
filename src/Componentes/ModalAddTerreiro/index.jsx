@@ -35,7 +35,7 @@ const ModalAddTerreiro = ({stateOpen, stateClose,closeModal, idExterno, idConteu
                     overlayClassName={idExterno}
                     className={idConteudo}
                     shouldCloseOnOverlayClick={fecharComCliqueDeFora}
-                    >
+                   >
                 <TituloEstilizado>Add. Terreiros</TituloEstilizado>
                 <InputContainer>
                    <InputText placeholder="Nome do Terreiro"/>

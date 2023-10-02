@@ -12,6 +12,7 @@ ReactModal.setAppElement("#root");
 const TituloEstilizado = styled.h1`
     color: ${CoresTemaEscuro.corBackgroundBotoes};
     font-size: 40px;
+    
 `
 
 const ModalControleIndividual = ({stateOpen, stateClose,closeModal, idExterno, idConteudo, fecharComCliqueDeFora}) => {
@@ -19,17 +20,22 @@ const ModalControleIndividual = ({stateOpen, stateClose,closeModal, idExterno, i
 
     function openModal12 () {
         setModalOpen(true)
+        const controleIndividual = document.getElementById("controleIndividual")
+        controleIndividual.classList.add("modalOpacity")
     }
 
     function closeModal12 () {
         setModalOpen(false)
+        const controleIndividual = document.getElementById("controleIndividual")
+        controleIndividual.classList.remove("modalOpacity")
     }
     return(
         <ReactModal isOpen={stateOpen}
                     onRequestClose={stateClose}
                     overlayClassName={idExterno}
                     className={idConteudo}
-                    shouldCloseOnEsc={fecharComCliqueDeFora}>
+                    shouldCloseOnEsc={fecharComCliqueDeFora}
+                    id="controleIndividual">
                 <TituloEstilizado>1A</TituloEstilizado>
                 <Status status="ON">Status</Status>
                 <Switch/>

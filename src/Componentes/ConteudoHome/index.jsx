@@ -7,7 +7,7 @@ import ModalControle from "../ModalControleEstacoes"
 import CoresTemaEscuro from "../../Colors/cores"
 
 const ConteudoEstilizado = styled.section`
-    position: relative;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,9 +16,10 @@ const ConteudoEstilizado = styled.section`
     border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
     border-radius: 10px;
     width: 50%;
-    height: 77vh;
-    top: 1vh;
+    height: 83vh;
+    top: 16.5vh;
     padding-bottom: 40px;
+    margin: 0 0 0 30px;
 `
 
 const Conteudo = () => {
@@ -26,17 +27,21 @@ const Conteudo = () => {
 
     function openModal (){
         setModalClose(true);
+        const elemento = document.getElementById("meuElemento")
+        const modalControleGeral = document.getElementById("modalControleGeral")
+        elemento.classList.add("modalOpacity")
+        modalControleGeral.classList.add("modalOpacity")
     }
     
     function closeModal(){
         setModalClose(false);
+        const elemento = document.getElementById("meuElemento")
+        const modalControleGeral = document.getElementById("modalControleGeral")
+        elemento.classList.remove("modalOpacity")
+        modalControleGeral.classList.remove("modalOpacity")
     }
 
     const [modalOpen1, setModalClose1] = useState(true);
-
- 
-
-   
     return(
     <ConteudoEstilizado>
         <ContainerConteudo/>

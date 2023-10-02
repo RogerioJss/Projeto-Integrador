@@ -30,11 +30,18 @@ const ArduinoStatus  = ({status,children}) => {
 
     function openControleIndividual(){
         setModalOpen(true)
+        const elemento = document.getElementById("meuElemento")
+        const modalControleGeral = document.getElementById("modalControleGeral")
+        elemento.classList.add("modalOpacity")
+        modalControleGeral.classList.add("modalOpacity")
     }
 
     function closeControleIndividual(){
         setModalOpen(false)
-        
+        const elemento = document.getElementById("meuElemento")
+        const modalControleGeral = document.getElementById("modalControleGeral")
+        elemento.classList.remove("modalOpacity")
+        modalControleGeral.classList.remove("modalOpacity")
     }
     return(
         <ArduinoStatusContainer>

@@ -3,7 +3,7 @@ import IconeInput from "./IconeInputs";
 import CoresTemaEscuro from "../../Colors/cores";
 
 const CaixasTexto = styled.input`
-    width: 493px;
+    width: ${props => props.width || "493px"};
     height: 61px;
     text-align: center;
     border-radius: 7px;
@@ -16,12 +16,13 @@ const CaixasTexto = styled.input`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    min-width: 205px;
 `
 
     
-const InputText = ({placeholder,type,id }) => {
+const InputText = ({placeholder,type,id,width }) => {
     return( 
-        <CaixasTexto type = {type} placeholder={placeholder} id={id}/>
+        <CaixasTexto type = {type} placeholder={placeholder} id={id} width={width} />
           
     )
 }

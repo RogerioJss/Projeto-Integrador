@@ -26,10 +26,18 @@ const Pefil = () => {
 
     function openModal (){
         setModalClose(true);
+        const elemento = document.getElementById("meuElemento")
+        const modalControle = document.getElementById("modalControleGeral")
+        elemento.classList.add("modalOpacity")
+        modalControle.classList.add("modalOpacity")
     }
     
     function closeModal(){
         setModalClose(false);
+        const elemento = document.getElementById("meuElemento")
+        const modalControle = document.getElementById("modalControleGeral")
+        elemento.classList.remove("modalOpacity")
+        modalControle.classList.remove("modalOpacity")
     }
 
     return(
