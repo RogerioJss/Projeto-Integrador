@@ -56,7 +56,7 @@ Error generating stack: `+i.message+`
     font-weight: 400;
     line-height: normal;
     min-width: 205px;
-`,wo=({placeholder:e,type:t,id:n,width:r})=>w.jsx(Dy,{type:t,placeholder:e,id:n,width:r}),Fe={UserIcon:"/src/assets/icons/Vector.svg",SenhaIcon:"/src/assets/icons/IconSenha.svg",MostrarSenhaIcon:"/src/assets/icons/mostrarSenhaIcon.svg",MostrarSenhaVisivel:"/src/assets/icons/mostrarSenhaVisivelIcon.svg",IconHomeAtivado:"/src/assets/icons/Icon-Home-Ativado.svg",IconHomeDesativado:"/src/assets/icons/Icon-Home-Desativado.svg",IconRelatorioAtivado:"/src/assets/icons/Icon-Relatorio-Ativado.svg",IconRelatorioDesativado:"/src/assets/icons/Icon-Relatorio-Desativado.svg",IconNotificacaoAtivado:"/src/assets/icons/Icon-Notificacao-Ativado.svg",IconNotificacaoDesativado:"/src/assets/icons/Icon-Notificacao-Desativado.svg",IconeFecharModal:"/src/assets/icons/Icon-Fechar-Modal.svg",IconeAbrirArduino:"/src/assets/icons/IconeAbrirArduino.svg",Linha:"/src/assets/Linha.svg",Sol:"/src/assets/Sol.svg"},Iy=b.a`
+`,wo=({placeholder:e,type:t,id:n,width:r})=>w.jsx(Dy,{type:t,placeholder:e,id:n,width:r}),Fe={UserIcon:"public/assets/icons/Vector.svg",SenhaIcon:"public/assets/icons/IconSenha.svg",MostrarSenhaIcon:"public/assets/icons/mostrarSenhaIcon.svg",MostrarSenhaVisivel:"public/assets/icons/mostrarSenhaVisivelIcon.svg",IconHomeAtivado:"public/assets/icons/Icon-Home-Ativado.svg",IconHomeDesativado:"public/assets/icons/Icon-Home-Desativado.svg",IconRelatorioAtivado:"public/assets/icons/Icon-Relatorio-Ativado.svg",IconRelatorioDesativado:"public/assets/icons/Icon-Relatorio-Desativado.svg",IconNotificacaoAtivado:"public/assets/icons/Icon-Notificacao-Ativado.svg",IconNotificacaoDesativado:"public/assets/icons/Icon-Notificacao-Desativado.svg",IconeFecharModal:"public/assets/icons/Icon-Fechar-Modal.svg",IconeAbrirArduino:"public/assets/icons/IconeAbrirArduino.svg",Linha:"public/assets/Linha.svg",Sol:"public/assets/Sol.svg"},Iy=b.a`
     color: ${M.corTextos};
     font-family: Inter;
     font-size: 22px;
@@ -738,6 +738,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     height: ${e=>e.heigth||"60%"};
     max-width: 400px;
     min-height: ${e=>e.mimHeight||"100px"};
+    max-height: 80px;
     color: ${e=>e.color||M.corTextoBotoes};
     font-size: 30px;
     border-radius: 20px;
