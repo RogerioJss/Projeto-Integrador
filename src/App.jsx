@@ -14,7 +14,7 @@ function App() {
         <EstilosGlobais/>
         <Routes>
           <Route path="/login" element={<Login/>}/>
-          <Route path="/" element={<Home/>}/>
+          <Route path="/Projeto-Integrador" element={<Home/>}/>
         </Routes>
       </div>
     </Router>
