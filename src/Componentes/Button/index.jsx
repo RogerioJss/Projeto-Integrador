@@ -7,6 +7,7 @@ const ButtonEstilizado = styled.button`
     height: ${props => props.heigth || "60%"};
     max-width: 400px;
     min-height: ${props => props.mimHeight || "100px"};
+    max-height: 80px;
     color: ${(props) => props.color || CoresTemaEscuro.corTextoBotoes};
     font-size: 30px;
     border-radius: 20px;

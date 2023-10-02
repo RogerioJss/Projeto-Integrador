@@ -45,7 +45,7 @@ const Conteudo = () => {
     return(
     <ConteudoEstilizado>
         <ContainerConteudo/>
-        <Button className="button" id="button1" onClick={openModal} heigth="29%" mimHeight="80px">Adicionar Terreiro</Button>
+        <Button className="button" id="button1" onClick={openModal} heigth="29%" mimHeight="80px" >Adicionar Terreiro</Button>
         <ModalAddTerreiro stateOpen={modalOpen} stateClose={closeModal} closeModal={closeModal} idExterno="modalTerreiroExterno" 
         idConteudo="modalTerreiroConteudo" fecharComCliqueDeFora={false}/>
         <ModalControle stateOpen1={modalOpen1}  idExterno1="modalControleExterno" idConteudo1="modalControleConteudo" 

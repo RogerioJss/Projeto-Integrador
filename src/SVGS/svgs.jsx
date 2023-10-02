@@ -1,20 +1,20 @@
 const SVGS = {
-    UserIcon: "/src/assets/icons/Vector.svg",
-    SenhaIcon: "/src/assets/icons/IconSenha.svg",
-    MostrarSenhaIcon: "/src/assets/icons/mostrarSenhaIcon.svg",
-    MostrarSenhaVisivel:"/src/assets/icons/mostrarSenhaVisivelIcon.svg",
+    UserIcon: "public/assets/icons/Vector.svg",
+    SenhaIcon: "public/assets/icons/IconSenha.svg",
+    MostrarSenhaIcon: "public/assets/icons/mostrarSenhaIcon.svg",
+    MostrarSenhaVisivel:"public/assets/icons/mostrarSenhaVisivelIcon.svg",
 
-    IconHomeAtivado: "/src/assets/icons/Icon-Home-Ativado.svg",
-    IconHomeDesativado: "/src/assets/icons/Icon-Home-Desativado.svg",
-    IconRelatorioAtivado: "/src/assets/icons/Icon-Relatorio-Ativado.svg",
-    IconRelatorioDesativado: "/src/assets/icons/Icon-Relatorio-Desativado.svg",
-    IconNotificacaoAtivado: "/src/assets/icons/Icon-Notificacao-Ativado.svg",
-    IconNotificacaoDesativado: "/src/assets/icons/Icon-Notificacao-Desativado.svg",
-    IconeFecharModal: "/src/assets/icons/Icon-Fechar-Modal.svg",
-    IconeAbrirArduino: "/src/assets/icons/IconeAbrirArduino.svg",
+    IconHomeAtivado: "public/assets/icons/Icon-Home-Ativado.svg",
+    IconHomeDesativado: "public/assets/icons/Icon-Home-Desativado.svg",
+    IconRelatorioAtivado: "public/assets/icons/Icon-Relatorio-Ativado.svg",
+    IconRelatorioDesativado: "public/assets/icons/Icon-Relatorio-Desativado.svg",
+    IconNotificacaoAtivado: "public/assets/icons/Icon-Notificacao-Ativado.svg",
+    IconNotificacaoDesativado: "public/assets/icons/Icon-Notificacao-Desativado.svg",
+    IconeFecharModal: "public/assets/icons/Icon-Fechar-Modal.svg",
+    IconeAbrirArduino: "public/assets/icons/IconeAbrirArduino.svg",
 
-    Linha: "/src/assets/Linha.svg",
-    Sol: "/src/assets/Sol.svg"
+    Linha: "public/assets/Linha.svg",
+    Sol: "public/assets/Sol.svg"
 }
 
 export default SVGS
