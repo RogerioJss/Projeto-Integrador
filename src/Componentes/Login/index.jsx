@@ -71,7 +71,7 @@ const Login = () => {
     return(
     <DivLogin>
         <ContainerLogo>
-             <img src="/src/assets/logo.png" alt="" />
+             <img src="public/assets/logo.png" alt="" />
         </ContainerLogo>
        
         <DivEstilizada>
