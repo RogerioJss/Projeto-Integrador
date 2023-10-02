@@ -61,7 +61,7 @@ const Header = () => {
             /> 
         
             <ItemNavegacao
-            src={itemNotificacao ? SVGS.IconNotificacaoDesativado : SVGS.IconNotificacaoAtivado}
+            src={itemNotificacao ? SVGS.IconNotificacaoAtivado : SVGS.IconNotificacaoDesativado}
             onClick={()=> itemAtivar("notificacao")}
             />
       </ItensContainer>

@@ -49,7 +49,7 @@ const ArduinoStatus  = ({status,children}) => {
             <Status height="50px" status={status}/>
             <ButtonMostrarSenha src={SVGS.IconeAbrirArduino} onClick={openControleIndividual}/>
             <ModalControleIndividual stateOpen={openModal} stateClose={closeControleIndividual} closeModal={closeControleIndividual} 
-            idExterno="controleIndividual" idConteudo="controleIndividualConteudo" fecharComCliqueDeFora={true}/>
+            idExterno="controleIndividual"  idConteudo="controleIndividualConteudo" fecharComCliqueDeFora={true}/>
         </ArduinoStatusContainer>
     )
 }
