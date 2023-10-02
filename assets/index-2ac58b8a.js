@@ -56,7 +56,7 @@ Error generating stack: `+i.message+`
     font-weight: 400;
     line-height: normal;
     min-width: 205px;
-`,wo=({placeholder:e,type:t,id:n,width:r})=>w.jsx(Dy,{type:t,placeholder:e,id:n,width:r}),Fe={UserIcon:"../assets/icons/Vector.svg",SenhaIcon:"../assets/icons/IconSenha.svg",MostrarSenhaIcon:"../assets/icons/mostrarSenhaIcon.svg",MostrarSenhaVisivel:"../assets/icons/mostrarSenhaVisivelIcon.svg",IconHomeAtivado:"../assets/icons/Icon-Home-Ativado.svg",IconHomeDesativado:"../assets/icons/Icon-Home-Desativado.svg",IconRelatorioAtivado:"../assets/icons/Icon-Relatorio-Ativado.svg",IconRelatorioDesativado:"../assets/icons/Icon-Relatorio-Desativado.svg",IconNotificacaoAtivado:"../assets/icons/Icon-Notificacao-Ativado.svg",IconNotificacaoDesativado:"../assets/icons/Icon-Notificacao-Desativado.svg",IconeFecharModal:"../assets/icons/Icon-Fechar-Modal.svg",IconeAbrirArduino:"../assets/icons/IconeAbrirArduino.svg",Linha:"../assets/Linha.svg",Sol:"../assets/Sol.svg"},Iy=b.a`
+`,wo=({placeholder:e,type:t,id:n,width:r})=>w.jsx(Dy,{type:t,placeholder:e,id:n,width:r}),Fe={UserIcon:"assets/icons/Vector.svg",SenhaIcon:"assets/icons/IconSenha.svg",MostrarSenhaIcon:"assets/icons/mostrarSenhaIcon.svg",MostrarSenhaVisivel:"assets/icons/mostrarSenhaVisivelIcon.svg",IconHomeAtivado:"assets/icons/Icon-Home-Ativado.svg",IconHomeDesativado:"assets/icons/Icon-Home-Desativado.svg",IconRelatorioAtivado:"assets/icons/Icon-Relatorio-Ativado.svg",IconRelatorioDesativado:"assets/icons/Icon-Relatorio-Desativado.svg",IconNotificacaoAtivado:"assets/icons/Icon-Notificacao-Ativado.svg",IconNotificacaoDesativado:"/assets/icons/Icon-Notificacao-Desativado.svg",IconeFecharModal:"assets/icons/Icon-Fechar-Modal.svg",IconeAbrirArduino:"assets/icons/IconeAbrirArduino.svg",Linha:"assets/Linha.svg",Sol:"assets/Sol.svg"},Iy=b.a`
     color: ${M.corTextos};
     font-family: Inter;
     font-size: 22px;
@@ -162,7 +162,7 @@ Error generating stack: `+i.message+`
     width: 100%;
     text-align: center;
     height: 50vh;
-`,C0=()=>{const[e,t]=O.useState(!1),n=()=>{t(!e)};return w.jsxs(S0,{children:[w.jsx(E0,{children:w.jsx("img",{src:"/src/assets/logo.png",alt:""})}),w.jsxs(xf,{children:[w.jsx(wo,{placeholder:"Digite seu email",type:"email"}),w.jsx(Qi,{src:Fe.UserIcon,id:"userIcon",className:"icones"})]}),w.jsxs(xf,{children:[w.jsx(wo,{placeholder:"Digite sua senha ",type:e?"text":"password",id:"senha"}),w.jsx(Qi,{src:Fe.SenhaIcon,id:"senhaIcon",className:"icones"}),w.jsx(Nu,{onClick:n,src:e?Fe.MostrarSenhaVisivel:Fe.MostrarSenhaIcon,id:"mostrarSenha",className:"icones"})]}),w.jsx(Ny,{href:"#",target:"_blank",children:"Esqueceu sua senha?"}),w.jsx(Ay,{children:"ENTRAR"})]})},k0=Ty`
+`,C0=()=>{const[e,t]=O.useState(!1),n=()=>{t(!e)};return w.jsxs(S0,{children:[w.jsx(E0,{children:w.jsx("img",{src:"public/assets/logo.png",alt:""})}),w.jsxs(xf,{children:[w.jsx(wo,{placeholder:"Digite seu email",type:"email"}),w.jsx(Qi,{src:Fe.UserIcon,id:"userIcon",className:"icones"})]}),w.jsxs(xf,{children:[w.jsx(wo,{placeholder:"Digite sua senha ",type:e?"text":"password",id:"senha"}),w.jsx(Qi,{src:Fe.SenhaIcon,id:"senhaIcon",className:"icones"}),w.jsx(Nu,{onClick:n,src:e?Fe.MostrarSenhaVisivel:Fe.MostrarSenhaIcon,id:"mostrarSenha",className:"icones"})]}),w.jsx(Ny,{href:"#",target:"_blank",children:"Esqueceu sua senha?"}),w.jsx(Ay,{children:"ENTRAR"})]})},k0=Ty`
 @import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
 
 html {
