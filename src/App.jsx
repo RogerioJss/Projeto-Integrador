@@ -13,7 +13,7 @@ function App() {
       <div>
         <EstilosGlobais/>
         <Routes>
-          <Route path="/login" element={<Login/>}/>
+          <Route path="/Projeto-Integrador/login" element={<Login/>}/>
           <Route path="/Projeto-Integrador" element={<Home/>}/>
         </Routes>
       </div>
