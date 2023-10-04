@@ -11,11 +11,13 @@ const ContainerSwitchEstilizado = styled.div`
     width: 40%;
     padding: 0 20px;
     min-width: 310px;
+    gap: 15px;
 `
 const SwitchEstilizado = styled.div`
     width: 64px;
     margin: 4px auto;
     position: relative;
+    
 
 `
 
@@ -78,8 +80,8 @@ const Switch = () => {
     return(
         <ContainerSwitchEstilizado>
             <TituloEstizado color={CoresTemaEscuro.corStatusOn} opacity={isOn ? 0.5 : 1 }  >Ligado</TituloEstizado>   
-            <SwitchEstilizado>
-                <ButtonEstilizado onClick={LigarDesligar} isOn={isOn}></ButtonEstilizado>
+            <SwitchEstilizado onClick={LigarDesligar} >
+                <ButtonEstilizado isOn={isOn} ></ButtonEstilizado>
                 <SpanEstilizado></SpanEstilizado>
             </SwitchEstilizado>
             <TituloEstizado color={CoresTemaEscuro.corStatusError} opacity={isOn ? 1 : 0.5} >Desligado</TituloEstizado>

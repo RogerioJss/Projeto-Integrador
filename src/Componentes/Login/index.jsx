@@ -75,7 +75,7 @@ const Login = () => {
         </ContainerLogo>
        
         <DivEstilizada>
-            <InputText placeholder={"Digite seu email"} type={"email"}/>
+            <InputText placeholder={"Digite seu email"} type={"email"} />
             <IconeInput src={SVGS.UserIcon} id={"userIcon"} className={"icones"} /> 
         </DivEstilizada>
         <DivEstilizada>

@@ -468,6 +468,28 @@ template {
 .modalOpacity{
   opacity: 0.5;
   pointer-events: none;
+  overflow: hidden;
+}
+
+// Modal Notificação
+
+.modalNotificacaoConteudo{
+  background-color: ${CoresTemaEscuro.corBackgroundBotoes};
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 70vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 4;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 15px;
+  border: 2px solid white;
+  border-radius: 10px;
+  overflow: scroll;
 }
 
 `

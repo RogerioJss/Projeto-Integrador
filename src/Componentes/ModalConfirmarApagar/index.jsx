@@ -20,7 +20,7 @@ const ModalConfirmarApagar = ({stateOpen1, stateClose1,closeModal1, idExterno1, 
                     shouldCloseOnOverlayClick={fecharComCliqueDeFora1}
                     >
                     <TextosSuperiores>Deseja mesmo apagar?</TextosSuperiores>
-                    <TextosInferiores>O Terreno será apagado para SEMPRE!!</TextosInferiores>
+                    <TextosInferiores>O Terreno será retirado do sistema.</TextosInferiores>
                     <ButtonContainer>
                         <Button onClick={closeModal1} >Sim</Button>
                         <Button onClick={closeModal1} backgroud={CoresTemaEscuro.corStatusError} >Não</Button>
