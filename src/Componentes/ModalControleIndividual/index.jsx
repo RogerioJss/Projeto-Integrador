@@ -15,7 +15,7 @@ const TituloEstilizado = styled.h1`
     
 `
 
-const ModalControleIndividual = ({stateOpen, stateClose,closeModal, idExterno, idConteudo, fecharComCliqueDeFora}) => {
+const ModalControleIndividual = ({stateOpen, stateClose,closeModal, idExterno, idConteudo, fecharComCliqueDeFora, estado}) => {
     const [modalOpen, setModalOpen] = useState(false)
 
     function openModal12 () {
@@ -29,19 +29,29 @@ const ModalControleIndividual = ({stateOpen, stateClose,closeModal, idExterno, i
         const controleIndividual = document.getElementById("controleIndividual")
         controleIndividual.classList.remove("modalOpacity")
     }
+
+    function fecharDuasModais(){
+        const elemento = document.getElementById("meuElemento")
+        const modalControleGeral = document.getElementById("modalControleGeral")
+        elemento.classList.remove("modalOpacity")
+        modalControleGeral.classList.remove("modalOpacity")
+        setModalOpen(false)
+        estado(false)
+    }
     return(
         <ReactModal isOpen={stateOpen}
                     onRequestClose={stateClose}
                     overlayClassName={idExterno}
                     className={idConteudo}
                     shouldCloseOnEsc={fecharComCliqueDeFora}
-                    id="controleIndividual">
+                    id="controleIndividual"
+                    estado={estado}>
                 <TituloEstilizado>1A</TituloEstilizado>
                 <Status status="ON">Status</Status>
                 <Switch/>
                 <Button onClick={openModal12} borderColor={CoresTemaEscuro.corVermelhoNegativo} color={CoresTemaEscuro.corTextoBotoes} 
                 backgroud={CoresTemaEscuro.corStatusError}>Apagar</Button>
-                <ModalConfirmarApagar  stateOpen1={modalOpen} stateClose1={closeModal12} closeModal1={closeModal12} 
+                <ModalConfirmarApagar  stateOpen1={modalOpen} stateClose1={closeModal12}  closeModal1={closeModal12} fecharDuasModais={fecharDuasModais} 
                 idExterno1="modalConfirmarApagar" idConteudo1="modalConfirmarApagarConteudo" fecharComCliqueDeFora1={false}/>
         </ReactModal>
     )

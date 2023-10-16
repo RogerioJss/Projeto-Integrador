@@ -12,6 +12,7 @@ const SVGS = {
     IconNotificacaoDesativado: "/assets/icons/Icon-Notificacao-Desativado.svg",
     IconeFecharModal: "assets/icons/Icon-Fechar-Modal.svg",
     IconeAbrirArduino: "assets/icons/IconeAbrirArduino.svg",
+    IconRelatorio: "assets/icons/Icon-Relatorios.svg",
 
     Linha: "assets/Linha.svg",
     Sol: "assets/Sol.svg"

@@ -15,7 +15,10 @@ const ContainerNotificacao = styled.div`
     border-radius: 15px;
     border: 2px solid black;
     max-height: 350px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 0.5em; /* Largura personalizada da barra de rolagem */
+    }
 `
 
 const TextoData =  styled.h3`
@@ -36,13 +39,21 @@ const ModalNotificacao =  ({stateOpen, stateClose, closeModal, idConteudo,idExte
                         <Notificacao text="O arduino 5A esta em estado de..." chindren="5A" data="00:30 , 03/10/2023"/>
                         <Notificacao text="O arduino 7A esta em estado de..." chindren="7A" data="15:30 , 03/10/2023"/>
                         <Notificacao text="O arduino 7A esta em estado de..." chindren="7A" data="15:30 , 03/10/2023"/>
+                        <Notificacao text="O arduino 7A esta em estado de..." chindren="7A" data="15:30 , 03/10/2023"/>
+                        <Notificacao text="O arduino 7A esta em estado de..." chindren="7A" data="15:30 , 03/10/2023"/>
+                        <Notificacao text="O arduino 7A esta em estado de..." chindren="7A" data="15:30 , 03/10/2023"/>
+                        <Notificacao text="O arduino 7A esta em estado de..." chindren="7A" data="15:30 , 03/10/2023"/>
                     </ContainerNotificacao>
                     <ContainerNotificacao>
                         <TextoData>05/10/2023</TextoData>
                         <Notificacao text="O arduino 1A esta em estado de..." chindren="1A" data="10:30 , 03/10/2023"/>
                         <Notificacao text="O arduino 5A esta em estado de..." chindren="5A" data="00:30 , 03/10/2023"/>
                         <Notificacao text="O arduino 7A esta em estado de..." chindren="7A" data="15:30 , 03/10/2023"/>
+                        <Notificacao text="O arduino 7A esta em estado de..." chindren="7A" data="15:30 , 03/10/2023"/>
+                        <Notificacao text="O arduino 7A esta em estado de..." chindren="7A" data="15:30 , 03/10/2023"/>
+                        <Notificacao text="O arduino 7A esta em estado de..." chindren="7A" data="15:30 , 03/10/2023"/>
                     </ContainerNotificacao>
+                    
         </ReactModal>
     )
 }

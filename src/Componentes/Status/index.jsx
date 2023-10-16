@@ -17,8 +17,8 @@ const DivStatus = styled.div`
     background-color: ${(props) => props.color};
     font-size: 40px;
     color: white;
-    border-radius: 10px;
-    min-width: 185px;
+    border-radius: 0.625rem;
+    min-width: 8.125rem;
     height: ${props => props.height || '84px'};
     text-align: center;
     display: flex;

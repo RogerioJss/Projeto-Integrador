@@ -4,6 +4,7 @@ import Login from "./Componentes/Login"
 import EstilosGlobais from "./Componentes/EstilosGlobais/estilosGlobais"
 import { BrowserRouter as Router,Routes, Route} from "react-router-dom"
 import Home from "./Componentes/Home"
+import Relatorios from "./Componentes/Relatorios"
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/Projeto-Integrador/login" element={<Login/>}/>
           <Route path="/Projeto-Integrador" element={<Home/>}/>
+          <Route path="/Projeto-Integrador/Relatorios" element={<Relatorios/>}/>
         </Routes>
       </div>
     </Router>

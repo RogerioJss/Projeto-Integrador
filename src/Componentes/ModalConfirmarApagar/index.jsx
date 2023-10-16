@@ -11,7 +11,7 @@ const ButtonContainer = styled.div`
     width: 80%;
 `
 
-const ModalConfirmarApagar = ({stateOpen1, stateClose1,closeModal1, idExterno1, idConteudo1,fecharComCliqueDeFora1}) => {
+const ModalConfirmarApagar = ({stateOpen1, stateClose1,closeModal1,fecharDuasModais, idExterno1, idConteudo1,fecharComCliqueDeFora1}) => {
     return(
         <ReactModal isOpen={stateOpen1}
                     onRequestClose={stateClose1}
@@ -22,7 +22,7 @@ const ModalConfirmarApagar = ({stateOpen1, stateClose1,closeModal1, idExterno1, 
                     <TextosSuperiores>Deseja mesmo apagar?</TextosSuperiores>
                     <TextosInferiores>O Terreno será retirado do sistema.</TextosInferiores>
                     <ButtonContainer>
-                        <Button onClick={closeModal1} >Sim</Button>
+                        <Button onClick={fecharDuasModais} >Sim</Button>
                         <Button onClick={closeModal1} backgroud={CoresTemaEscuro.corStatusError} >Não</Button>
                     </ButtonContainer>
         </ReactModal>

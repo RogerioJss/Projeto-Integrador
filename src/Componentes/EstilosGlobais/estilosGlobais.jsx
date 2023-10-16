@@ -489,8 +489,9 @@ template {
   padding: 15px;
   border: 2px solid white;
   border-radius: 10px;
-  overflow: scroll;
+
 }
+
 
 `
 
