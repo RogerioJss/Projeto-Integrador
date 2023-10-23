@@ -12,9 +12,10 @@ const ConteudoEstilizado = styled.section`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
+    min-width: 33.875rem;
     border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
-    border-radius: 10px;
+    border-radius: 0.625rem;
     width: 50%;
     height: 83vh;
     top: 16.5vh;

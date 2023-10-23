@@ -410,10 +410,11 @@ template {
   background-color: white;
   align-items: center;
   width: 40%;
-  gap: 33px;
-  padding: 15px;
-  border-radius: 20px;
-  border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
+  min-width: 20.8125rem;
+  gap: 2.0625rem;
+  padding: 0.9375rem;
+  border-radius: 1.25rem;
+  border: 0.125rem solid ${CoresTemaEscuro.corBackgroundBotoes};
   position: absolute;
   top: 16.5vh;
   margin: auto;

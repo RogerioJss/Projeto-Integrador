@@ -1,12 +1,20 @@
-import { DatePicker, DesktopDatePicker, LocalizationProvider } from "@mui/x-date-pickers"
+
+import {  DesktopDatePicker, LocalizationProvider } from "@mui/x-date-pickers"
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs from "dayjs";
+import {  useState } from "react";
 
 const CalendarioPesquisa = () => {
+   const [dataAtual, setDataAtual] = useState(dayjs())
+   const [novaDataSelecionada, setNovaDataSelecionada] = useState(dataAtual)
+   function dataSelecionada (novaData) {
+    setDataAtual(novaData)
+    setNovaDataSelecionada(novaData)
+   }
     return(
         <>
             <LocalizationProvider dateAdapter={AdapterDayjs} label="Desktop variant">
-                <DesktopDatePicker defaultValue={dayjs('2023-10-05')} />
+                <DesktopDatePicker valorNovaData={novaDataSelecionada} value={dataAtual} onChange={dataSelecionada} format="D/M/YYYY"/>
             </LocalizationProvider>
         </>
        

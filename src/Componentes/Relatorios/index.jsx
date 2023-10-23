@@ -7,13 +7,11 @@ import PesquisarRelatorios from "./PesquisarRelatorios"
 
 const Relatorios = () => {
     return(
-        <>
-        <Header/>
         <div id="relatorios21" className="">
+            <Header/>
             <PesquisarRelatorios/>
             <CriarRelatorios/>
         </div>
-        </>
         
     )
 }

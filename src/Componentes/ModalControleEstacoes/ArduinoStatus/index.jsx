@@ -12,7 +12,7 @@ const ArduinoStatusContainer = styled.div`
     align-items: center;
     background-color: whitesmoke;
     border-radius: 15px;
-    min-width: 134px;
+    min-width: 264px;
     width: 60%;
     padding: 23px;
     border: 2px solid ;

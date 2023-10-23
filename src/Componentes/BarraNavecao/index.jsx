@@ -78,22 +78,20 @@ const Header = () => {
         
     }
 
+      const elemento = document.getElementById("meuElemento")
+      const modalControleGeral = document.getElementById("modalControleGeral")
       
-
       const  openModal = () => {
         setStateOpen2(!stateOpen2)
-        const elemento = document.getElementById("meuElemento")
-        const modalControleGeral = document.getElementById("modalControleGeral")
-        elemento.classList.add("modalOpacity")
-        modalControleGeral.classList.add("modalOpacity")
+          elemento.classList.add("modalOpacity")
+          modalControleGeral.classList.add("modalOpacity")
+  
       }
 
       const closeModal = () => {
         setStateOpen2(false)
-        const elemento = document.getElementById("meuElemento")
-        const modalControleGeral = document.getElementById("modalControleGeral")
-        elemento.classList.remove("modalOpacity")
-        modalControleGeral.classList.remove("modalOpacity")
+          elemento.classList.remove("modalOpacity")
+          modalControleGeral.classList.remove("modalOpacity")
       }
       
       const geral = () => {

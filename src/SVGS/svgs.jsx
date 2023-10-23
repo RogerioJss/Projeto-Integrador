@@ -13,6 +13,7 @@ const SVGS = {
     IconeFecharModal: "assets/icons/Icon-Fechar-Modal.svg",
     IconeAbrirArduino: "assets/icons/IconeAbrirArduino.svg",
     IconRelatorio: "assets/icons/Icon-Relatorios.svg",
+    IconLupa: "assets/icons/Icon_Lupa.svg",
 
     Linha: "assets/Linha.svg",
     Sol: "assets/Sol.svg"
