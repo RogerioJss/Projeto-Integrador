@@ -6,8 +6,8 @@ import SVGS from "../../SVGS/svgs";
 import Links from "../Links";
 import ButtonEntrar from "./ButtonEntrar";
 import ButtonMostrarSenha from "./ButtonMostrarSenha";
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import  { useState } from 'react';
+
 
 const DivLogin = styled.div`
     background-color: #F4F4F4;

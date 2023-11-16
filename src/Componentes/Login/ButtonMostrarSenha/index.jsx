@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import IconeInput from "../../Imputs/IconeInputs"
-import SVGS from "../../../SVGS/svgs"
+
 
 
 const ButtonMostrarSenhaEstilizado = styled.button`
