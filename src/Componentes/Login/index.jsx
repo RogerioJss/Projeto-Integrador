@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import CoresTemaEscuro from "/src/colors/cores.js"
+import CoresTemaEscuro from "../../Colors/cores"
 import InputText from "../Imputs";
 import IconeInput from "../Imputs/IconeInputs";
 import SVGS from "../../SVGS/svgs";
