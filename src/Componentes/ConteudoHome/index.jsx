@@ -3,27 +3,66 @@ import Button from "../Button"
 import ContainerConteudo from "../ContainerConteudo"
 import ModalAddTerreiro from "../ModalAddTerreiro"
 import { useState } from "react"
-import ModalControle from "../ModalControleEstacoes"
-import CoresTemaEscuro from "../../Colors/cores"
 
+import CoresTemaEscuro from "../../Colors/cores"
+import InputText from "../Imputs"
+import ArduinoStatus from "../ArduinoStatus"
+
+const ContainerGeral = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    flex-direction: column;
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+`
 const ConteudoEstilizado = styled.section`
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 0.625rem;
-    min-width: 33.875rem;
+    gap: 1rem;
+    min-width: 0;
     border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
     border-radius: 0.625rem;
-    width: 50%;
-    height: 83vh;
-    top: 16.5vh;
-    padding-bottom: 40px;
-    margin: 0 0 0 30px;
 `
 
-const Conteudo = () => {
+const ContainerControleGeral =  styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  min-width: 20.8125rem;
+  gap: 1.4rem;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  border: 0.125rem solid ${CoresTemaEscuro.corBackgroundBotoes};
+`
+const StyleBotton = (status1) => {
+    switch(status1){
+        case "LIGAR":
+            return{
+                children: "Ligar Todos",
+                borderColor: CoresTemaEscuro.corVerdePositivo,
+                color: CoresTemaEscuro.corTextoBotoes,
+                background: CoresTemaEscuro.corBackgroundBotoes
+            }
+        case "DESLIGAR":
+            return{
+                children: "Desligar Todos",
+                borderColor: CoresTemaEscuro.corVermelhoNegativo,
+                color: CoresTemaEscuro.corTextoBotoes,
+                background: CoresTemaEscuro.corStatusError
+            }
+    }
+}
+
+const Conteudo = ({status1}) => {
+    const {children, borderColor, color,background} = StyleBotton(status1);
     const [modalOpen, setModalClose] = useState(false);
 
     function openModal (){
@@ -41,17 +80,25 @@ const Conteudo = () => {
         elemento.classList.remove("modalOpacity")
         modalControleGeral.classList.remove("modalOpacity")
     }
-
-    const [modalOpen1, setModalClose1] = useState(true);
     return(
-    <ConteudoEstilizado>
-        <ContainerConteudo/>
-        <Button className="button" id="button1" onClick={openModal} heigth="29%" mimHeight="80px" >Adicionar Terreiro</Button>
-        <ModalAddTerreiro stateOpen={modalOpen} stateClose={closeModal} closeModal={closeModal} idExterno="modalTerreiroExterno" 
-        idConteudo="modalTerreiroConteudo" fecharComCliqueDeFora={false}/>
-        <ModalControle stateOpen1={modalOpen1}  idExterno1="modalControleExterno" idConteudo1="modalControleConteudo" 
-        fecharComCliqueDeFora1={false} status1="LIGAR"/>
-    </ConteudoEstilizado>
+        <ContainerGeral>
+            <ConteudoEstilizado>
+                <ContainerConteudo/>
+                <Button className="button" id="button1" onClick={openModal} heigth="29%" minHeight="80px" >Adicionar Terreiro</Button>
+                <ModalAddTerreiro stateOpen={modalOpen} stateClose={closeModal} closeModal={closeModal} idExterno="modalTerreiroExterno" 
+                idConteudo="modalTerreiroConteudo" fecharComCliqueDeFora={false}/>
+            </ConteudoEstilizado>
+            <ContainerControleGeral>
+                    <InputText type='text' placeholder="Pesquise o nome do arduino" width="90%"/>
+                    <ArduinoStatus status="ON">1A</ArduinoStatus>
+                    <ArduinoStatus status="OFF">3A</ArduinoStatus>
+                    <ArduinoStatus status="ALERT">5A</ArduinoStatus>
+                    <ArduinoStatus status="ERROR">8A</ArduinoStatus>
+                    <Button  borderColor={borderColor} color={color}  backgroud={background}
+                    width="40%" heigth="10%" minHeight="70px" >{children}</Button>
+            </ContainerControleGeral>
+        </ContainerGeral>
+    
     )
 }
 

@@ -1,17 +1,16 @@
-import { useState } from "react"
 import styled from "styled-components"
 const Select = styled.select`
 width: 50%;
 height: 5rem;
 border-radius: 10px;
 text-align: center;
-font-size: 2rem;
+font-size: 1.5rem;
 
 `
 const Option = styled.option`
 `
 
-const Dropdown = ({setOpcoes}) => {
+const Dropdown = () => {
     let opcoes = [
         {
         setOpcoes:`Selecionar Terreiro`    
@@ -23,7 +22,7 @@ const Dropdown = ({setOpcoes}) => {
     }]
     return(
         <Select>
-            {opcoes.map(opcao=><Option>{opcao.setOpcoes}</Option>)}
+            {opcoes.map((opcao,index)=><Option key={index}>{opcao.setOpcoes}</Option>)}
         </Select>
     )
 }

@@ -1,5 +1,3 @@
-import styled from "styled-components"
-import CoresTemaEscuro from "/src/colors/cores.js"
 import Login from "./Componentes/Login"
 import EstilosGlobais from "./Componentes/EstilosGlobais/estilosGlobais"
 import { BrowserRouter as Router,Routes, Route} from "react-router-dom"

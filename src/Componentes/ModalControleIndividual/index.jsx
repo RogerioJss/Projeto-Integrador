@@ -15,7 +15,7 @@ const TituloEstilizado = styled.h1`
     
 `
 
-const ModalControleIndividual = ({stateOpen, stateClose,closeModal, idExterno, idConteudo, fecharComCliqueDeFora, estado}) => {
+const ModalControleIndividual = ({stateOpen, stateClose, idExterno, idConteudo, fecharComCliqueDeFora, estado}) => {
     const [modalOpen, setModalOpen] = useState(false)
 
     function openModal12 () {
@@ -32,9 +32,7 @@ const ModalControleIndividual = ({stateOpen, stateClose,closeModal, idExterno, i
 
     function fecharDuasModais(){
         const elemento = document.getElementById("meuElemento")
-        const modalControleGeral = document.getElementById("modalControleGeral")
         elemento.classList.remove("modalOpacity")
-        modalControleGeral.classList.remove("modalOpacity")
         setModalOpen(false)
         estado(false)
     }

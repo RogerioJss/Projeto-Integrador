@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import Status from "../../Status";
-import ButtonMostrarSenha from "../../Login/ButtonMostrarSenha";
-import SVGS from "../../../SVGS/svgs";
-import CoresTemaEscuro from "../../../Colors/cores";
-import ModalControleIndividual from "../../ModalControleIndividual";
+import Status from "../Status";
+import ButtonMostrarSenha from "../Login/ButtonMostrarSenha";
+import SVGS from "../../SVGS/svgs";
+import CoresTemaEscuro from "../../Colors/cores";
+import ModalControleIndividual from "../ModalControleIndividual";
 import { useState } from "react";
 
 const ArduinoStatusContainer = styled.div`
@@ -14,7 +14,7 @@ const ArduinoStatusContainer = styled.div`
     border-radius: 15px;
     min-width: 264px;
     width: 60%;
-    padding: 23px;
+    padding: 8px;
     border: 2px solid ;
     height: 80px;
 `
@@ -31,17 +31,13 @@ const ArduinoStatus  = ({status,children}) => {
     function openControleIndividual(){
         setModalOpen(true)
         const elemento = document.getElementById("meuElemento")
-        const modalControleGeral = document.getElementById("modalControleGeral")
         elemento.classList.add("modalOpacity")
-        modalControleGeral.classList.add("modalOpacity")
     }
 
     function closeControleIndividual(){
         setModalOpen(false)
         const elemento = document.getElementById("meuElemento")
-        const modalControleGeral = document.getElementById("modalControleGeral")
         elemento.classList.remove("modalOpacity")
-        modalControleGeral.classList.remove("modalOpacity")
     }
     return(
         <ArduinoStatusContainer>

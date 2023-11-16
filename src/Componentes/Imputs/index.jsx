@@ -3,7 +3,7 @@ import IconeInput from "./IconeInputs";
 import CoresTemaEscuro from "../../Colors/cores";
 
 const CaixasTexto = styled.input`
-    width: ${props => props.width || "493px"};
+    width: ${props => props.width || "30.8125rem"};
     height: 61px;
     text-align: center;
     border-radius: 7px;

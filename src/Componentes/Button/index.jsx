@@ -6,12 +6,12 @@ const ButtonEstilizado = styled.button`
     width: ${props => props.width || "40%"};
     height: ${props => props.heigth || "60%"};
     max-width: 400px;
-    min-height: ${props => props.mimHeight || "100px"};
+    min-height: ${props => props.minheight || "100px"};
     max-height: 80px;
     color: ${(props) => props.color || CoresTemaEscuro.corTextoBotoes};
     font-size: 30px;
     border-radius: 20px;
-    border: 2px solid ${(props) => props.borderColor };
+    border: 2px solid ${(props) => props.bordercolor };
     transition: transform 0.3s ease;
     &:hover{
         transform: scale(1.1);
@@ -19,10 +19,10 @@ const ButtonEstilizado = styled.button`
 `
 
 
-const Button = ({children,onClick, className,id,borderColor,color, backgroud,width,heigth,mimHeight}) => {
+const Button = ({children,onClick, className,id,borderColor,color, backgroud,width,heigth,minHeight}) => {
     return(
-    <ButtonEstilizado onClick={onClick} className={className} id={id} borderColor={borderColor} color={color} backgroud={backgroud}
-    width={width} heigth={heigth} mimHeight={mimHeight}>
+    <ButtonEstilizado onClick={onClick} className={className} id={id} bordercolor={borderColor} color={color} backgroud={backgroud}
+    width={width} heigth={heigth} minheight={minHeight}>
         {children}
     </ButtonEstilizado>
     )

@@ -6,7 +6,7 @@ const Home = () => {
     return(
         <div id="meuElemento" className="">
             <Header/>
-            <Conteudo/>
+            <Conteudo status1={'LIGAR'}/>
         </div>
     )
 }
