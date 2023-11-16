@@ -32,7 +32,7 @@ const Header = () => {
   const elemento = document.getElementById("meuElemento");
   const relatorio = document.getElementById("relatorios21");
   useEffect(() => {
-    if (pageAtual == "/Projeto-Integrador/Relatorios") {
+    if (pageAtual == "/Relatorios") {
       setItemHome(false);
       setItemRelatorio(true);
     }
@@ -41,7 +41,7 @@ const Header = () => {
   const itemAtivar = (item) => {
     switch (item) {
       case "notificacao":
-        if (pageAtual == "/Projeto-integrador") {
+        if (pageAtual == "/") {
           setItemNotificacao(true);
           setItemHome(false);
           setItemRelatorio(false);
@@ -50,7 +50,7 @@ const Header = () => {
             setItemHome(true);
           }
         }
-        if (pageAtual == "/Projeto-integrador/Relatorios") {
+        if (pageAtual == "/Relatorios") {
           setItemNotificacao(true);
           setItemHome(false);
           setItemRelatorio(false);
@@ -62,14 +62,14 @@ const Header = () => {
         }
         break;
       case "home":
-        if (pageAtual == "/Projeto-Integrador") {
+        if (pageAtual == "/") {
           setItemHome(true);
           setItemNotificacao(false);
           setItemRelatorio(false);
         }
         break;
       case "relatorio":
-        if (pageAtual == "/Projeto-Integrador/Relatorios") {
+        if (pageAtual == "/Relatorios") {
           setItemHome(false);
           setItemNotificacao(false);
           setItemRelatorio(true);
@@ -113,7 +113,7 @@ const Header = () => {
     <HeaderEstilizado>
       <Pefil />
       <ItensContainer>
-        <Link to={"/Projeto-Integrador/Relatorios"}>
+        <Link to={"/Relatorios"}>
           <ItemNavegacao
             src={
               itemRelatorio
@@ -124,7 +124,7 @@ const Header = () => {
           />
         </Link>
 
-        <Link to={"/Projeto-Integrador"}>
+        <Link to={"/"}>
           <ItemNavegacao
             src={itemHome ? SVGS.IconHomeAtivado : SVGS.IconHomeDesativado}
             onClick={() => itemAtivar("home")}

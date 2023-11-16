@@ -12,9 +12,9 @@ function App() {
       <div>
         <EstilosGlobais/>
         <Routes>
-          <Route path="/Projeto-Integrador/login" element={<Login/>}/>
-          <Route path="/Projeto-Integrador" element={<Home/>}/>
-          <Route path="/Projeto-Integrador/Relatorios" element={<Relatorios/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/Relatorios" element={<Relatorios/>}/>
         </Routes>
       </div>
     </Router>
