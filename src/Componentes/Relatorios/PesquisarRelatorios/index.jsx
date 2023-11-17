@@ -12,19 +12,27 @@ const PesquisaContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
+    width: 100%;
+    @media (min-width: 768px) {
+        width: 40%;
+        margin: 0 0.9375rem;
+    }
     border: 0.125rem solid ${CoresTemaEscuro.corBackgroundBotoes};
     border-radius: 0.9375rem;
     padding: 0.625rem;
     gap: 15px;
-    margin: 0 0.9375rem;
-    min-width: 21.8125rem;
+    
+    
 `
 const ContainerDataPicker = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    flex-direction: column;
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
 `
 
 const PesquisarRelatorios = () => {

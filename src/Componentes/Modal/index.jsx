@@ -17,6 +17,7 @@ const ContainerTextos = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
 
  color: ${CoresTemaEscuro.corTextos};
 
