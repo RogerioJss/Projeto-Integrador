@@ -8,11 +8,12 @@ const ContainerRelatorios = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid black;
-    border-radius: 10px;
+    border: 0.125rem solid black;
+    border-radius: 0.625rem;
     background-color: whitesmoke;
-    gap: 20px;
-    padding: 10px;
+    gap: 0.125rem;
+    padding: 0.625rem;
+    max-width: 100%;
 `
 
 

@@ -15,12 +15,15 @@ const ModalContainer = styled.div`
 const TituloEstilizado = styled.h1`
     color: ${CoresTemaEscuro.corBackgroundBotoes};
     font-size: 50px;
+    text-align: center;
 
 `
 const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
+
 
 `
 const ParagrafoEstilizado = styled.p`
@@ -38,10 +41,10 @@ const ModalAddTerreiro = ({stateOpen, stateClose,closeModal, idExterno, idConteu
                    >
                 <TituloEstilizado>Add. Terreiros</TituloEstilizado>
                 <InputContainer>
-                   <InputText placeholder="Nome do Terreiro"/>
-                   <InputText placeholder="Ip do Terreiro"/>
+                   <InputText width='50%' placeholder="Nome do Terreiro"/>
+                   <InputText width='50%' placeholder="Ip do Terreiro"/>
                 </InputContainer>   
-                <Button onClick={closeModal} color={CoresTemaEscuro.corTextoBotoes}>
+                <Button onClick={closeModal} color={CoresTemaEscuro.corTextoBotoes} >
                         <ParagrafoEstilizado>Adicionar</ParagrafoEstilizado>
                 </Button>  
             </ReactModal>
