@@ -1,6 +1,6 @@
 
 import { createGlobalStyle } from  "styled-components";
-import CoresTemaEscuro from "../../../Colors/cores"
+import CoresTemaEscuro from "../../Colors/cores"
 
 
 const EstilosGlobais = createGlobalStyle`
