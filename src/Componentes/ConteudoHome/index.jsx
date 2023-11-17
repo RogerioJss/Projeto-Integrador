@@ -23,7 +23,7 @@ const ConteudoEstilizado = styled.section`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.6rem;
     min-width: 0;
     border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
     border-radius: 0.625rem;
@@ -35,9 +35,12 @@ const ContainerControleGeral =  styled.div`
   background-color: white;
   justify-content: center;
   align-items: center;
-  width: 40%;
-  min-width: 20.8125rem;
-  gap: 1.4rem;
+  width: 100%;
+  @media (min-width: 768px) {
+        width:40%;
+    }
+  
+  gap: 1.2rem;
   padding: 2rem;
   border-radius: 1.25rem;
   border: 0.125rem solid ${CoresTemaEscuro.corBackgroundBotoes};

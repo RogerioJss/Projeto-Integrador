@@ -9,17 +9,22 @@ import { Link, useLocation } from "react-router-dom";
 
 const HeaderEstilizado = styled.header`
   background-color: ${CoresTemaEscuro.corBackgroundBotoes};
-  height: 100px;
   display: flex;
-  justify-content: space-between;
+  gap: 10%;
+  @media (min-width: 400px) {
+      justify-content: space-between;
+    }
   align-items: center;
-  padding: 0 30px;
-  margin: 0 0 15px;
+  padding: 0.625rem 1.5rem;
+  margin-bottom: 0.9375rem;
 `;
 
 const ItensContainer = styled.div`
   display: flex;
-  gap: 114px;
+  gap: 1.3rem;
+  @media (max-width: 400px) {
+    gap: 1rem;
+    }
 `;
 
 const Header = () => {

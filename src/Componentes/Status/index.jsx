@@ -18,7 +18,9 @@ const DivStatus = styled.div`
     font-size: 40px;
     color: white;
     border-radius: 0.625rem;
-    min-width: 8.125rem;
+    @media (min-width: 500px) {
+      min-width: 60%;
+    }
     height: ${props => props.height || '84px'};
     text-align: center;
     display: flex;

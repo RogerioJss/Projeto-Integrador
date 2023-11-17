@@ -6,6 +6,11 @@ import PesquisarRelatorios from "./PesquisarRelatorios";
 const ContainerConteudo = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 0.625rem;
+  @media (min-width: 768px) {
+        flex-direction: row;
+    }
   
 `;
 

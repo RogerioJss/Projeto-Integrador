@@ -1,6 +1,6 @@
 
 import { createGlobalStyle } from  "styled-components";
-import CoresTemaEscuro from "../../Colors/cores"
+import CoresTemaEscuro from "../../../Colors/cores"
 
 
 const EstilosGlobais = createGlobalStyle`
@@ -330,30 +330,35 @@ template {
 
 .conteudoModal{
   background-color: white;
-  width: 40%;
-  min-height: 85vh;
-  max-height: 825px;
+  width: 100%;
+  
+  @media (min-width: 1000px) {
+    width: 40%;
+    left: 30%;
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+  
   display: flex;
-  gap: 20px;
+ 
   align-items: center;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 2.5rem;
   position: absolute;
-  bottom: 82vh;
-  padding: 20px;
-  border-radius: 25px;
+  padding: 0.5rem;
+  border-radius: 1.5625rem;
   border: 2x solid ${CoresTemaEscuro.corBackgroundBotoes} !important;
-  left: 35%;
   top: 6vh;
   z-index: 2;
-  border: 3px solid ;
+  border: 0.1875rem solid ;
 }
 
 .conteudoModal button{
   transition: transform 0.3s ease;
   position: absolute;
-  right: 2%;
-  top: 5%;
+  right: -15px;
+  top: -30px;
+  
 }
 
 .conteudoModal button:hover{
@@ -367,26 +372,40 @@ template {
   top: -40px;
 }
 
+#linha{
+  width: 100%;
+  @media (max-width: 500px) {
+    width: 90%;
+  }
+}
+
 
 
 //ModaltTerreiroConteudo
 .modalTerreiroConteudo{
   background-color: white;
   max-width: 720px;
-  max-height: 628px;
-  min-width: 526px ;
-  min-height: 585px;
-  width: 70%;
-  height: 80%;
+  width: 100%;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap:67px;
+  gap: 20px;
   border-radius: 20px;
   position: absolute;
   bottom: 5%;
-  left: 29%;
+  
+  @media (min-width: 1006px) {
+      left: 29%;
+      width: 70%;
+      gap:67px;
+      height: 80%;
+      min-height: 585px;
+      input {
+        width: 100%;
+      }
+    }
   z-index: 3;
   border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
 }
@@ -394,9 +413,9 @@ template {
 
 .modalTerreiroConteudo button{
   width: 50%;
-  height: 15%;
-  min-width: 233px;
-  min-height: 100px;
+  @media (max-width: 600px) {
+    width: 80%;
+  }
   color: ${CoresTemaEscuro.corVerdePositivo};
   border: 2px solid ${CoresTemaEscuro.corVerdePositivo};
   text-align: center;
@@ -430,14 +449,20 @@ template {
   justify-content: center;
   align-items: center;
   background-color: white;
-  width: 40%;
-  gap: 70px;
-  border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
-  border-radius: 15px;
+  width: 100%;
+  @media (min-width: 850px){
+   width: 40%;
+   left: 30%;
+   gap: 4.375rem;
+   top: 16vh;
+  }
+  gap: 1.25rem;
+  border: 0.125rem solid ${CoresTemaEscuro.corBackgroundBotoes};
+  border-radius: 0.9375rem;
   position: absolute;
   margin: auto;
-  left: 30%;
-  top: 16vh;
+  
+  top: 96vh;
   padding: 15px;
 
 }
@@ -449,7 +474,12 @@ template {
 .modalConfirmarApagarConteudo{
   background-color: white;
   border: 2px solid ${CoresTemaEscuro.corBackgroundBotoes};
-  width: 40%;
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 40%;
+    top: 35vh;
+    left: 30%;
+  }
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -459,8 +489,8 @@ template {
   padding: 30px;
   margin: auto;
   position: absolute;
-  left: 30%;
-  top: 33vh;
+  
+  top: 100vh;
   z-index: 2;
   gap: 30px;
 }
@@ -478,7 +508,6 @@ template {
   background-color: ${CoresTemaEscuro.corBackgroundBotoes};
   min-height: 100vh;
   max-height: 100vh;
-  width: 70vh;
   position: absolute;
   right: 0;
   top: 0;

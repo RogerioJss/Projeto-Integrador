@@ -12,6 +12,9 @@ const ContainerSwitchEstilizado = styled.div`
     padding: 0 20px;
     min-width: 310px;
     gap: 15px;
+    @media (max-width: 320px) {
+        gap: 10px;
+    }
 `
 const SwitchEstilizado = styled.div`
     width: 64px;
@@ -41,6 +44,11 @@ const AnimationSwitchBack = keyframes`
 
 const ButtonEstilizado = styled.button`
     width: 32px;
+    @media (max-width: 320px) {
+        width: 22px;
+        height: 22px;
+    }
+    width: 32px;
     height: 32px;
     border: 0;
     border-radius: 50%;
@@ -55,6 +63,9 @@ const ButtonEstilizado = styled.button`
 
 const SpanEstilizado = styled.span`
     display: block;
+    @media (max-width: 320px) {
+        width: 44px; 
+    }
     width: 64px;
     height: 24px; 
     border: 1px solid var(--stroke-color);

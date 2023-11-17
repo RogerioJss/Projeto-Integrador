@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import IconeInput from "./IconeInputs";
+
 import CoresTemaEscuro from "../../Colors/cores";
 
 const CaixasTexto = styled.input`
