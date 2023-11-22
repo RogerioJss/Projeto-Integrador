@@ -1,6 +1,9 @@
 import styled from "styled-components"
 const Select = styled.select`
-width: 50%;
+width: 100%;
+@media (min-width: 768px) {
+    width: 50%;
+    }
 height: 5rem;
 border-radius: 10px;
 text-align: center;

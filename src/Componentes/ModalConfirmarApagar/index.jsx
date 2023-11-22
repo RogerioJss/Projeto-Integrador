@@ -22,7 +22,7 @@ const ModalConfirmarApagar = ({stateOpen1, stateClose1,closeModal1,fecharDuasMod
                     <TextosSuperiores>Deseja mesmo apagar?</TextosSuperiores>
                     <TextosInferiores>O Terreno será retirado do sistema.</TextosInferiores>
                     <ButtonContainer>
-                        <Button onClick={fecharDuasModais} >Sim</Button>
+                        <Button onClick={fecharDuasModais}  >Sim</Button>
                         <Button onClick={closeModal1} backgroud={CoresTemaEscuro.corStatusError} >Não</Button>
                     </ButtonContainer>
         </ReactModal>
