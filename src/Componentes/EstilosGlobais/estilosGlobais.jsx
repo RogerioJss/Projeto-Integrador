@@ -278,7 +278,7 @@ template {
   #mostrarSenha{
     position: absolute !important;
     bottom: 20% !important;
-    left: 90%;
+    left: 84%;
     transition: transform 0.4s ease;
     width: 30px;
     height: 30px;
@@ -354,16 +354,12 @@ template {
 }
 
 .conteudoModal button{
-  transition: transform 0.3s ease;
   position: absolute;
   right: -15px;
   top: -30px;
   
 }
 
-.conteudoModal button:hover{
-  transform: scale(1.1);
-}
 
 // Horario/DivEstilizada/ContainerLinhaSol/sol
 

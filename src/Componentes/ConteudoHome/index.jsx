@@ -87,7 +87,7 @@ const Conteudo = ({status1}) => {
         <ContainerGeral>
             <ConteudoEstilizado>
                 <ContainerConteudo/>
-                <Button className="button" id="button1" onClick={openModal} heigth="29%" minHeight="80px" >Adicionar Terreiro</Button>
+                <Button className="button" id="button1" onClick={openModal} heigth="29%" minHeight="80px" width={100} >Adicionar Terreiro</Button>
                 <ModalAddTerreiro stateOpen={modalOpen} stateClose={closeModal} closeModal={closeModal} idExterno="modalTerreiroExterno" 
                 idConteudo="modalTerreiroConteudo" fecharComCliqueDeFora={false}/>
             </ConteudoEstilizado>
@@ -98,7 +98,7 @@ const Conteudo = ({status1}) => {
                     <ArduinoStatus status="ALERT">5A</ArduinoStatus>
                     <ArduinoStatus status="ERROR">8A</ArduinoStatus>
                     <Button  borderColor={borderColor} color={color}  backgroud={background}
-                    width="40%" heigth="10%" minHeight="70px" >{children}</Button>
+                    width="100" heigth="10%" minHeight="70px" >{children}</Button>
             </ContainerControleGeral>
         </ContainerGeral>
     

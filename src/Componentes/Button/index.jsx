@@ -4,9 +4,9 @@ import CoresTemaEscuro from "../../Colors/cores"
 const ButtonEstilizado = styled.button`
     background-color: ${(props) => props.backgroud || CoresTemaEscuro.corBackgroundBotoes};
     width: ${props => props.width || "40%"};
-    height: ${props => props.heigth || "60%"};
+    height: ${props => props.heigth };
     max-width: 400px;
-    min-height: ${props => props.minheight || "100px"};
+    min-height: ${props => props.minheight };
     max-height: 80px;
     color: ${(props) => props.color || CoresTemaEscuro.corTextoBotoes};
     font-size: 30px;
@@ -16,6 +16,7 @@ const ButtonEstilizado = styled.button`
     &:hover{
         transform: scale(1.1);
     }
+    padding: 1rem;
 `
 
 

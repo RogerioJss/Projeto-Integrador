@@ -10,9 +10,11 @@ import { Link, useLocation } from "react-router-dom";
 const HeaderEstilizado = styled.header`
   background-color: ${CoresTemaEscuro.corBackgroundBotoes};
   display: flex;
-  gap: 10%;
+  gap: 0.625rem;
+  flex-direction: column;
   @media (min-width: 400px) {
       justify-content: space-between;
+      flex-direction: row;
     }
   align-items: center;
   padding: 0.625rem 1.5rem;
@@ -23,7 +25,7 @@ const ItensContainer = styled.div`
   display: flex;
   gap: 1.3rem;
   @media (max-width: 400px) {
-    gap: 1rem;
+    gap: 1.5rem;
     }
 `;
 
