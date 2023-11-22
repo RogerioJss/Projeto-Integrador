@@ -39,7 +39,7 @@ const Header = () => {
   const elemento = document.getElementById("meuElemento");
   const relatorio = document.getElementById("relatorios21");
   useEffect(() => {
-    if (pageAtual == "/Relatorios") {
+    if (pageAtual == "/relatorios") {
       setItemHome(false);
       setItemRelatorio(true);
     }
@@ -67,7 +67,7 @@ const Header = () => {
   const itemAtivar = (item) => {
     switch (item) {
       case "notificacao":
-        if (pageAtual == "/") {
+        if (pageAtual == "/home") {
           setItemNotificacao(true);
           setItemHome(false);
           setItemRelatorio(false);
@@ -76,7 +76,7 @@ const Header = () => {
             setItemHome(true);
           }
         }
-        if (pageAtual == "/Relatorios") {
+        if (pageAtual == "/relatorios") {
           setItemNotificacao(true);
           setItemHome(false);
           setItemRelatorio(false);
@@ -88,14 +88,14 @@ const Header = () => {
         }
         break;
       case "home":
-        if (pageAtual == "/") {
+        if (pageAtual == "/home") {
           setItemHome(true);
           setItemNotificacao(false);
           setItemRelatorio(false);
         }
         break;
       case "relatorio":
-        if (pageAtual == "/Relatorios") {
+        if (pageAtual == "/relatorios") {
           setItemHome(false);
           setItemNotificacao(false);
           setItemRelatorio(true);
@@ -122,7 +122,7 @@ const Header = () => {
     <HeaderEstilizado>
       <Pefil />
       <ItensContainer>
-        <Link to={"/Relatorios"}>
+        <Link to={"/relatorios"}>
           <ItemNavegacao
             src={
               itemRelatorio
@@ -133,7 +133,7 @@ const Header = () => {
           />
         </Link>
 
-        <Link to={"/"}>
+        <Link to={"/home"}>
           <ItemNavegacao
             src={itemHome ? SVGS.IconHomeAtivado : SVGS.IconHomeDesativado}
             onClick={() => itemAtivar("home")}
