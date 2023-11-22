@@ -13,9 +13,9 @@ const HeaderEstilizado = styled.header`
   gap: 0.625rem;
   flex-direction: column;
   @media (min-width: 400px) {
-      justify-content: space-between;
-      flex-direction: row;
-    }
+    justify-content: space-between;
+    flex-direction: row;
+  }
   align-items: center;
   padding: 0.625rem 1.5rem;
   margin-bottom: 0.9375rem;
@@ -26,7 +26,7 @@ const ItensContainer = styled.div`
   gap: 1.3rem;
   @media (max-width: 400px) {
     gap: 1.5rem;
-    }
+  }
 `;
 
 const Header = () => {
@@ -43,8 +43,27 @@ const Header = () => {
       setItemHome(false);
       setItemRelatorio(true);
     }
-    [pageAtual];
-  });
+  }, [pageAtual]);
+
+  useEffect(() => {
+    if (stateOpen2) {
+      // lógica para adicionar classe quando a modal é aberta
+      if (relatorio) {
+        relatorio.classList.add("modalOpacity");
+      }
+      if (elemento) {
+        elemento.classList.add("modalOpacity");
+      }
+    } else {
+      // lógica para remover classe quando a modal é fechada
+      if (relatorio) {
+        relatorio.classList.remove("modalOpacity");
+      }
+      if (elemento) {
+        elemento.classList.remove("modalOpacity");
+      }
+    }
+  }, [stateOpen2]);
   const itemAtivar = (item) => {
     switch (item) {
       case "notificacao":
@@ -86,29 +105,12 @@ const Header = () => {
     }
   };
 
-  
-
   const openModal = () => {
     setStateOpen2(!stateOpen2);
-    if (relatorio) {
-      relatorio.classList.add("modalOpacity");
-    }
-    if (elemento) {
-      elemento.classList.add("modalOpacity");
-    }
-
   };
 
   const closeModal = () => {
     setStateOpen2(false);
-    if (relatorio) {
-      relatorio.classList.remove("modalOpacity");
-    }
-
-    if (elemento) {
-      elemento.classList.remove("modalOpacity");
-    }
-    
   };
 
   const geral = () => {
