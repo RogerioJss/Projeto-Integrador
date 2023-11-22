@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "../../Modal";
 import styled from "styled-components";
 import SVGS from "../../../SVGS/svgs";
-
 
 const ButtonOpenModal = styled.button`
   border-radius: 50%;
@@ -23,32 +22,39 @@ const DivEx = styled.div`
 const Pefil = () => {
   const [modalOpen, setModalClose] = useState(false);
   const elemento = document.getElementById("meuElemento");
-  const relatorio =  document.getElementById('relatorios21')
+  const relatorio = document.getElementById("relatorios21");
 
+  useEffect(() => {
+    if (modalOpen) {
+      if (elemento) {
+        elemento.classList.add("modalOpacity");
+      } else {
+        if (elemento) {
+          elemento.classList.remove("modalOpacity");
+        }
+      }
+    }
+  }, [modalOpen]);
   function openModal() {
     setModalClose(true);
-    if(relatorio){
-        relatorio.classList.add("modalOpacity");
+    if (relatorio) {
+      relatorio.classList.add("modalOpacity");
     }
-   
-    if(elemento){
-        elemento.classList.add("modalOpacity");
+
+    if (elemento) {
+      elemento.classList.add("modalOpacity");
     }
-    
-   
   }
 
   function closeModal() {
     setModalClose(false);
-    if(relatorio){
-        relatorio.classList.remove("modalOpacity");
+    if (relatorio) {
+      relatorio.classList.remove("modalOpacity");
     }
-  
-    if(elemento){
-        elemento.classList.remove("modalOpacity");
+
+    if (elemento) {
+      elemento.classList.remove("modalOpacity");
     }
-   
-   
   }
 
   return (
