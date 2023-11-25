@@ -12,9 +12,9 @@ function App() {
       <div>
         <EstilosGlobais/>
         <Routes>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/Relatorios" element={<Relatorios/>}/>
+          <Route path="/" element={<Login/>}/>
+          <Route path="/home" element={<Home/>}/>
+          <Route path="/relatorios" element={<Relatorios/>}/>
         </Routes>
       </div>
     </Router>
