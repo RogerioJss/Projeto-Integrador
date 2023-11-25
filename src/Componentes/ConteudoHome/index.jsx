@@ -8,6 +8,7 @@ import CoresTemaEscuro from "../../Colors/cores"
 import InputText from "../Imputs"
 import ArduinoStatus from "../ArduinoStatus"
 
+
 const ContainerGeral = styled.div`
     display: flex;
     align-items: center;
@@ -67,7 +68,9 @@ const StyleBotton = (status1) => {
 const Conteudo = ({status1}) => {
     const {children, borderColor, color,background} = StyleBotton(status1);
     const [modalOpen, setModalClose] = useState(false);
-
+    function LigarArduino(){
+        fetch('http://192.168.64.181:8080/L')
+    }
     function openModal (){
         setModalClose(true);
         const elemento = document.getElementById("meuElemento")
@@ -98,7 +101,7 @@ const Conteudo = ({status1}) => {
                     <ArduinoStatus status="ALERT">5A</ArduinoStatus>
                     <ArduinoStatus status="ERROR">8A</ArduinoStatus>
                     <Button  borderColor={borderColor} color={color}  backgroud={background}
-                    width="100" heigth="10%" minHeight="70px" >{children}</Button>
+                    width="100" heigth="10%" minHeight="70px" onClick={LigarArduino} >{children}</Button>
             </ContainerControleGeral>
         </ContainerGeral>
     
