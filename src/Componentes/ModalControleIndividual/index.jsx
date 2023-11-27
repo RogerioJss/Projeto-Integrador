@@ -61,6 +61,8 @@ const ModalControleIndividual = ({
     const minutos = String(agora.getMinutes()).padStart(2, "0");
 
     const horaFormatada = `${horas}:${minutos}`
+
+    return horaFormatada
   }
 
   function obterDataFormatada() {
