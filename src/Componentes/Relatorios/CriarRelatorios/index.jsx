@@ -36,9 +36,6 @@ const ContainerFiltro = styled.div`
   align-items: center;
   gap: 0.625rem;
   flex-direction: column;
-    @media (min-width: 768px) {
-        flex-direction: row;
-    }
 `;
 
 const CriarRelatorios = () => {
@@ -48,10 +45,7 @@ const CriarRelatorios = () => {
       <ContainerFiltro>
         <TextosInferiores>De</TextosInferiores>
         <CalendarioPesquisa />
-        <TextosInferiores>Até</TextosInferiores>
-        <CalendarioPesquisa />
       </ContainerFiltro>
-
       <ConteinerTipoRelatorio>
         <TipoRelatorio>PDF</TipoRelatorio>
         <TipoRelatorio>CSV</TipoRelatorio>

@@ -449,7 +449,7 @@ template {
   @media (min-width: 850px){
    width: 40%;
    left: 30%;
-   gap: 4.375rem;
+   gap:2rem;
    top: 16vh;
   }
   gap: 1.25rem;

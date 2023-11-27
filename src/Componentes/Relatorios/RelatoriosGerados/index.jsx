@@ -13,15 +13,14 @@ const ContainerRelatorios = styled.div`
     background-color: whitesmoke;
     gap: 0.125rem;
     padding: 0.625rem;
-    max-width: 100%;
 `
 
 
-const RelatoriosGerados = () => {
+const RelatoriosGerados = ({data, hora}) => {
     return(
         <ContainerRelatorios>
             <IconeInput src={SVGS.IconRelatorio}/>
-            <TextosInferiores>05/10/2023-14:00</TextosInferiores>
+            <TextosInferiores>{data}-{hora}</TextosInferiores>
             <ButtonMostrarSenha src={SVGS.IconeAbrirArduino}/>
         </ContainerRelatorios>
     )

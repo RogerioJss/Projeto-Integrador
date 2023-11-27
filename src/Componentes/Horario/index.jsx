@@ -31,7 +31,7 @@ const Horario = () => {
         <img src={SVGS.Sol} alt="" id="sol" />
         <ContainerSH>
           <HorarioAtual />
-          <Status status="ON">Status:</Status>
+          <Status status="ok">Status:</Status>
         </ContainerSH>
       </ContainerLinhaSol>
     </DivEstilizada>
