@@ -47,8 +47,7 @@ const CriarRelatorios = () => {
         <CalendarioPesquisa />
       </ContainerFiltro>
       <ConteinerTipoRelatorio>
-        <TipoRelatorio>PDF</TipoRelatorio>
-        <TipoRelatorio>CSV</TipoRelatorio>
+        <TipoRelatorio></TipoRelatorio>
       </ConteinerTipoRelatorio>
       <Button width={100}>Criar Relatorio</Button>
     </ConteinerGeral>
