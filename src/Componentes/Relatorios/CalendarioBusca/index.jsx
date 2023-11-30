@@ -10,7 +10,6 @@ const CalendarioPesquisa = ({dataSelect}) => {
     setDataAtual(novaData);
     setNovaDataSelecionada(novaData);
     dataSelect(novaData)
-    console.log(novaData);
   }
   return (
     <>

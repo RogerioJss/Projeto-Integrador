@@ -3,6 +3,7 @@ import CoresTemaEscuro from "../../../Colors/cores";
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
+import { useAppContext } from "../../../Contexts/contextHome";
 
 const ContainerSwitchEstilizado = styled.div`
   display: flex;
@@ -83,6 +84,7 @@ const TituloEstizado = styled.h1`
 const Switch = ({ idMudarStatus }) => {
   const [stateArduino, setStateArduino] = useState(null);
   const [isOn, setIsOn] = useState(false);
+  const { toggleSwitch} = useAppContext()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -90,8 +92,6 @@ const Switch = ({ idMudarStatus }) => {
         const response = await axios.get(
           `https://deploy-robo-coffe.vercel.app/j4mmcU6UuxQEubQJ3Wuwk1HUmeU2/terrenos/readone/${idMudarStatus}`
         );
-
-        // Aqui você pode acessar o valor específico do campo "on"
         const onFieldValue = response.data.on;
         setStateArduino(onFieldValue);
         setIsOn(!onFieldValue);
@@ -116,14 +116,16 @@ const Switch = ({ idMudarStatus }) => {
       )
       .then(function (response) {
         console.log("deu certo");
+        toggleSwitch()
       })
       .catch(function (error) {
         console.log("deu erro ", error);
       });
+      
   };
 
   return (
-    <ContainerSwitchEstilizado>
+    <ContainerSwitchEstilizado  >
       <TituloEstizado
         color={CoresTemaEscuro.corStatusOn}
         opacity={isOn ? 0.5 : 1}

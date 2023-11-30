@@ -8,6 +8,7 @@ import InputText from "../Imputs";
 import ArduinoStatus from "../ArduinoStatus";
 import axios from "axios";
 import { useEffect } from "react";
+import { useAppContext } from "../../Contexts/contextHome";
 
 const ContainerGeral = styled.div`
   display: flex;
@@ -87,6 +88,7 @@ const Conteudo = ({ status1 }) => {
   const { children, borderColor, color, background } = StyleBotton(status1);
   const [modalOpen, setModalClose] = useState(false);
   const [searchArduino, setSearchArduino] = useState("");
+  const { isSwitchOn } = useAppContext();
   
   function openModal() {
     setModalClose(true);
@@ -117,7 +119,7 @@ const Conteudo = ({ status1 }) => {
       .catch(function (error) {
         console.log(error);
       });
-  }, []);
+  }, [isSwitchOn]);
 
   function LigarArduino() {
     fetch("http://192.168.64.181:8080/L");

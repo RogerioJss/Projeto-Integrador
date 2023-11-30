@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import Dropdown from "../DropDown";
 import CoresTemaEscuro from "../../../Colors/cores";
-import CalendarioPesquisa from "../CalendarioBusca";
 import TipoRelatorio from "../TipoRelatorio";
 import Button from "../../Button";
 import TextosInferiores from "../../Textos/TextosInferiores";
+import DropdownDataRelatorio from "../DropDownDataRelatorio";
+import { useState } from "react";
+import axios from "axios";
+import { useAppContext } from "../../../Contexts/contextHome";
+
 const ConteinerGeral = styled.div`
   background-color: white;
   display: flex;
@@ -16,11 +20,10 @@ const ConteinerGeral = styled.div`
   padding: 2rem;
   gap: 15px;
   @media (min-width: 768px) {
-        width: 40%;
-        margin: 0 0.9375rem;
-    }
- 
-  
+    width: 40%;
+    margin: 0 0.9375rem;
+  }
+
   gap: 2rem;
   flex-wrap: wrap;
 `;
@@ -39,18 +42,68 @@ const ContainerFiltro = styled.div`
 `;
 
 const CriarRelatorios = () => {
+  const [terreiro, setTerreiro] = useState("null");
+  const { atualizarRelatoriosCriados } = useAppContext();
+
+  function setarTerreiro(terreiroNome) {
+    setTerreiro(terreiroNome);
+  }
+
+  function obterHoraFormatada() {
+    const agora = new Date();
+    const horas = String(agora.getHours()).padStart(2, "0");
+    const minutos = String(agora.getMinutes()).padStart(2, "0");
+
+    const horaFormatada = `${horas}:${minutos}`;
+
+    return horaFormatada;
+  }
+
+  function obterDataFormatada() {
+    const agora = new Date();
+
+    const dia = String(agora.getDate()).padStart(2, "0");
+    const mes = String(agora.getMonth() + 1).padStart(2, "0"); // Mês começa do zero
+    const ano = agora.getFullYear();
+
+    const dataHoraFormatada = `${dia}/${mes}/${ano}`;
+
+    return dataHoraFormatada;
+  }
+
+  const dataAtual = obterDataFormatada();
+  const horaAtual = obterHoraFormatada();
+
+  async function criarRelatorio() {
+    try {
+      await axios.post(
+        "https://deploy-robo-coffe.vercel.app/j4mmcU6UuxQEubQJ3Wuwk1HUmeU2/relatorios",
+        {
+          criador: "Nickolas",
+          data: dataAtual,
+          hora: horaAtual,
+          funcionamento: "1 minuto",
+          idTerreiro: terreiro,
+        }
+      );
+      atualizarRelatoriosCriados();
+    } catch (error) {}
+  }
+
   return (
     <ConteinerGeral>
-      <Dropdown />
+      <Dropdown terreiroNome={setarTerreiro} />
       <ContainerFiltro>
         <TextosInferiores>De</TextosInferiores>
-        <CalendarioPesquisa />
+        <DropdownDataRelatorio idTerreno={terreiro} />
       </ContainerFiltro>
       <ConteinerTipoRelatorio>
         <TipoRelatorio>PDF</TipoRelatorio>
         <TipoRelatorio>CSV</TipoRelatorio>
       </ConteinerTipoRelatorio>
-      <Button width={100}>Criar Relatorio</Button>
+      <Button width={100} onClick={criarRelatorio}>
+        Criar Relatorio
+      </Button>
     </ConteinerGeral>
   );
 };

@@ -254,7 +254,7 @@ template {
 #mostrarSenha{
   position: absolute !important;
   bottom: 47px !important;
-  right: -250px;
+  right: -10px;
   transition: transform 0.4s ease;
 }
 
@@ -278,7 +278,7 @@ template {
   #mostrarSenha{
     position: absolute !important;
     bottom: 20% !important;
-    left: 84%;
+    right: 20px;
     transition: transform 0.4s ease;
     width: 30px;
     height: 30px;
@@ -363,17 +363,7 @@ template {
 
 // Horario/DivEstilizada/ContainerLinhaSol/sol
 
-#sol{
-  position: absolute;
-  top: -40px;
-}
 
-#linha{
-  width: 100%;
-  @media (max-width: 500px) {
-    width: 90%;
-  }
-}
 
 
 

@@ -10,26 +10,32 @@ const Select = styled.select`
 `;
 const Option = styled.option``;
 
-const Dropdown = () => {
+const Dropdown = ({terreiroNome}) => {
   const [nomeTerreiro, setNomeTerreiro] = useState(null);
+  const [selectTerreiro, setSelectTerreiro] = useState(null)
   const fetchData = async () => {
     try {
       const response = await axios.get(
         "https://deploy-robo-coffe.vercel.app/j4mmcU6UuxQEubQJ3Wuwk1HUmeU2/terreno/nome"
       );
       setNomeTerreiro(response.data);
-      console.log(nomeTerreiro);
     } catch (error) {
       console.error("Erro ao buscar dados:", error);
     }
   };
 
-  // Chamada da API no momento da inicialização do componente
+  
   useEffect(() => {
     fetchData();
   }, []);
+
+  const hundleSelectTerreiro = (event) => {
+    const selectedValue = event.target.value
+    setSelectTerreiro(selectedValue)
+    terreiroNome(selectedValue)
+  }
   return (
-    <Select>
+    <Select onChange={hundleSelectTerreiro} >
       <Option  disabled selected>
         Selecione um Terreiro
       </Option>

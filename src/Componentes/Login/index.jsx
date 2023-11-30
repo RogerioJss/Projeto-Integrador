@@ -11,8 +11,6 @@ import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../services/firebaseConfig";
 import { useNavigate } from "react-router";
 
-import Button from "../Button";
-
 const DivLogin = styled.div`
   background-color: #f4f4f4;
   width: 100%;
@@ -86,10 +84,6 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
   }
 
-  if (loading) {
-    return <p>Carregando</p>;
-  }
-
   if (user) {
     return navigate("/home");
   }
@@ -104,7 +98,6 @@ const Login = () => {
           <InputText
             placeholder={"Digite seu email"}
             type={"email"}
-            width={100}
             onChange={(e) => setEmail(e.target.value)}
           />
           <IconeInput
@@ -118,7 +111,6 @@ const Login = () => {
             placeholder={"Digite sua senha "}
             type={senhaVisivel ? "text" : "password"}
             id={"senha"}
-            width={100}
             onChange={(e) => setPassword(e.target.value)}
           />
           <IconeInput
@@ -138,9 +130,6 @@ const Login = () => {
         <TextoErrouLogin>
           OPS!!Você errou seu login, insira um login correto!
         </TextoErrouLogin>
-        <Links href={"#"} target={"_blank"}>
-          Esqueceu sua senha?
-        </Links>
         <ButtonEntrar onclick={hundleAuthentication}>ENTRAR</ButtonEntrar>
       </DivLogin>
     );
@@ -166,7 +155,6 @@ const Login = () => {
           placeholder={"Digite sua senha "}
           type={senhaVisivel ? "text" : "password"}
           id={"senha"}
-          width={100}
           onChange={(e) => setPassword(e.target.value)}
         />
         <IconeInput
@@ -181,10 +169,6 @@ const Login = () => {
           className={"icones"}
         />
       </DivEstilizada>
-
-      <Links href={"#"} target={"_blank"}>
-        Esqueceu sua senha?
-      </Links>
       <ButtonEntrar onclick={hundleAuthentication}>ENTRAR</ButtonEntrar>
     </DivLogin>
   );

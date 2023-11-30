@@ -2,14 +2,12 @@ import { useEffect, useState } from "react";
 import Modal from "../../Modal";
 import styled from "styled-components";
 import SVGS from "../../../SVGS/svgs";
+import { useAppContext } from "../../../Contexts/contextHome";
 
 const ButtonOpenModal = styled.button`
   border-radius: 50%;
-  text-align: center;
   height: 80px;
   width: 80px;
-  justify-content: center;
-  align-items: center;
   border: 2px solid;
 `;
 const DivEx = styled.div`
@@ -19,10 +17,18 @@ const DivEx = styled.div`
   position: relative;
 `;
 
+const ImagemEstilizada = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+`;
+
 const Pefil = () => {
   const [modalOpen, setModalClose] = useState(false);
   const elemento = document.getElementById("meuElemento");
   const relatorio = document.getElementById("relatorios21");
+  const { imgUrl } = useAppContext();
 
   useEffect(() => {
     if (modalOpen) {
@@ -37,6 +43,7 @@ const Pefil = () => {
   }, [modalOpen]);
   function openModal() {
     setModalClose(true);
+    console.log(imgUrl);
     if (relatorio) {
       relatorio.classList.add("modalOpacity");
     }
@@ -59,7 +66,13 @@ const Pefil = () => {
 
   return (
     <DivEx>
-      <ButtonOpenModal onClick={openModal}>Open Modal</ButtonOpenModal>
+      <ButtonOpenModal onClick={openModal}>
+        {imgUrl !== "" ? (
+          <ImagemEstilizada src={imgUrl} />
+        ) : (
+          "Clique para abrir o perfil"
+        )}
+      </ButtonOpenModal>
       <Modal
         stateOpen={modalOpen}
         stateClose={closeModal}

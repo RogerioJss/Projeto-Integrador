@@ -30,7 +30,7 @@ const ArduinoStatus = ({
   nomeArduinoIndividal,
   statusArduinoIndividual,
   idMudarStatus,
-  idParaRelatorio
+  idParaRelatorio,
 }) => {
   const [openModal, setModalOpen] = useState(false);
 

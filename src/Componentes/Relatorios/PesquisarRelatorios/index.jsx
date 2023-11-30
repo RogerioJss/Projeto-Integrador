@@ -3,8 +3,9 @@ import CalendarioPesquisa from "../CalendarioBusca";
 import RelatoriosGerados from "../RelatoriosGerados";
 import CoresTemaEscuro from "../../../Colors/cores";
 import TextosInferiores from "../../Textos/TextosInferiores";
-import ralatoriosJson from "../../../jsons/relatorios.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios  from 'axios'
+import { useAppContext } from "../../../Contexts/contextHome";
 
 const PesquisaContainer = styled.div`
   background-color: white;
@@ -47,22 +48,35 @@ const RelatoriosGeradosContainer = styled.div`
   }
 `;
 
+
+
 const PesquisarRelatorios = () => {
   const [dataSelecionada, setDataSelecionada] = useState(null);
-
+  const [relatorios, setRelatorios] = useState(null)
+  const {relatorioCriado} = useAppContext()
   const hundleDataSelecionada = (novaData) => {
     setDataSelecionada(novaData);
   };
 
-  const relatoriosFiltrados = ralatoriosJson.filter(
+useEffect(() => {
+  axios.get("https://deploy-robo-coffe.vercel.app/j4mmcU6UuxQEubQJ3Wuwk1HUmeU2/relatorios/read/all").then(function (response){
+    const relatoriosJson = response.data
+    setRelatorios(relatoriosJson)
+    
+  })
+},[relatorioCriado])
+
+const relatoriosFiltrados = relatorios
+? relatorios.filter(
     (relatorio) =>
-      !dataSelecionada ||
-      relatorio.data === dataSelecionada.format("DD/MM/YYYY")
-  );
+      !dataSelecionada || relatorio.data === dataSelecionada.format("DD/MM/YYYY")
+  )
+: [];
+
 
   return (
     <PesquisaContainer>
-      <ContainerDataPicker>
+      <ContainerDataPicker> 
         <TextosInferiores>De</TextosInferiores>
         <CalendarioPesquisa dataSelect={hundleDataSelecionada} />
       </ContainerDataPicker>
@@ -74,11 +88,12 @@ const PesquisarRelatorios = () => {
             Nenhum Relatorio encontrado neste dia!!
           </TextoRelatorioNãoEncontrado>
         ) : (
-          relatoriosFiltrados.map((relatorio) => (
+          relatoriosFiltrados.map((relatorio,index) => (
             <RelatoriosGerados
-              key={relatorio.id}
+              key={index}
               data={relatorio.data}
               hora={relatorio.hora}
+              relatorioSelecionado={relatorio.idTerreiro}
             />
           ))
         )}

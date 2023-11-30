@@ -32,7 +32,7 @@ const ModalControleIndividual = ({
   nomeArduinoIndividual,
   statusArduinoIndividual,
   idMudarStatus,
-  idParaRelatorio,
+  idParaRelatorio
 }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
