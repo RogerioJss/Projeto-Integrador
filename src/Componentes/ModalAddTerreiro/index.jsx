@@ -78,7 +78,7 @@ const ModalAddTerreiro = ({
             ip: ipTerreiro,
             data: dataAtual,
             hora: horaAtual,
-            title: 'Terreiro Criado'
+            title: 'Terreno Criado'
           }
         )
         .then(() => {})

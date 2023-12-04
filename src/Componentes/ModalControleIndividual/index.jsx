@@ -93,11 +93,19 @@ const ModalControleIndividual = ({
         }
       )
       .then((reponse) => {
+        fetch("http://192.168.113.181:8080/O")
         console.log("deu certo");
       })
       .catch((error) => {
         console.log("erro ao gerar relatorio no banco", error);
       });
+  }
+
+  function moverIntermediaria () {
+    fetch("http://192.168.113.181:8080/I")
+  }
+  function moverLeste () {
+    fetch("http://192.168.113.181:8080/L")
   }
   return (
     <ReactModal
@@ -114,8 +122,8 @@ const ModalControleIndividual = ({
       <Switch idMudarStatus={idMudarStatus} />
       <ContainerBotoes>
         <Button width={100} onClick={gerarRelatorio}>Oeste</Button>
-        <Button width={100} onClick={gerarRelatorio}>Leste</Button>
-        <Button width={100} onClick={gerarRelatorio}>Intermediaria</Button>
+        <Button width={100} onClick={moverLeste}>Leste</Button>
+        <Button width={100} onClick={moverIntermediaria}>Intermediaria</Button>
       </ContainerBotoes>
 
       <Button

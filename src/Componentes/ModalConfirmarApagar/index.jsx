@@ -55,12 +55,7 @@ const ModalConfirmarApagar = ({
     setLoading(true);
     try {
       await axios.delete(
-        `https://deploy-robo-coffe.vercel.app/j4mmcU6UuxQEubQJ3Wuwk1HUmeU2/terrenos/delete/${arduinoDeletado}`,
-        {
-          data: dataAtual,
-          hora: horaAtual,
-          title: "Terreno Deletado",
-        }
+        `https://deploy-robo-coffe.vercel.app/j4mmcU6UuxQEubQJ3Wuwk1HUmeU2/terrenos/delete/${arduinoDeletado}?data=${dataAtual}&hora=${horaAtual}&title=Terreno%20Deletado`
       );
     } catch (erro) {
       console.log("erro", erro);

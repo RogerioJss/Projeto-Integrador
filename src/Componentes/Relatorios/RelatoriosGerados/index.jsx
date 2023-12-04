@@ -5,7 +5,6 @@ import TextosInferiores from "../../Textos/TextosInferiores";
 import ButtonMostrarSenha from "../../Login/ButtonMostrarSenha";
 import { Link } from "react-router-dom";
 
-
 const ContainerRelatorios = styled.div`
   display: flex;
   align-items: center;
@@ -17,17 +16,11 @@ const ContainerRelatorios = styled.div`
   padding: 0.625rem;
 `;
 
-
-
-const RelatoriosGerados = ({
-  data,
-  hora,
-  relatorioSelecionado,
-}) => {
+const RelatoriosGerados = ({ data, hora, relatorioSelecionado }) => {
   return (
     <ContainerRelatorios>
       <IconeInput src={SVGS.IconRelatorio} />
-     
+
       <TextosInferiores>
         {data}-{hora}
       </TextosInferiores>

@@ -9,6 +9,7 @@ import ArduinoStatus from "../ArduinoStatus";
 import axios from "axios";
 import { useEffect } from "react";
 import { useAppContext } from "../../Contexts/contextHome";
+import Lottie from "lottie-web";
 
 const ContainerGeral = styled.div`
   display: flex;
@@ -115,6 +116,7 @@ const Conteudo = ({ status1 }) => {
       .then(function (response) {
         const arduinosJson = response.data;
         setArduinos(arduinosJson);
+        
       })
       .catch(function (error) {
         console.log(error);
@@ -124,6 +126,7 @@ const Conteudo = ({ status1 }) => {
   function LigarArduino() {
     fetch("http://192.168.64.181:8080/L");
   }
+
 
   return (
     <ContainerGeral>

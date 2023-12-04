@@ -3,7 +3,7 @@ import CoresTemaEscuro from "../../Colors/cores";
 import InputText from "../Imputs";
 import IconeInput from "../Imputs/IconeInputs";
 import SVGS from "../../SVGS/svgs";
-import Links from "../Links";
+import SpinnerLoading from "../SpinnerLoading"
 import ButtonEntrar from "./ButtonEntrar";
 import ButtonMostrarSenha from "./ButtonMostrarSenha";
 import { useState } from "react";
@@ -82,6 +82,47 @@ const Login = () => {
   function hundleAuthentication(e) {
     e.preventDefault();
     signInWithEmailAndPassword(email, password);
+  }
+
+  if(loading){
+    return(
+      <DivLogin>
+      <ContainerLogo>
+        <img src="/assets/Logo.png" alt="" />
+      </ContainerLogo>
+
+      <DivEstilizada>
+        <InputText
+          placeholder={"Digite seu email"}
+          type={"email"}
+          width={100}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <IconeInput src={SVGS.UserIcon} id={"userIcon"} className={"icones"} />
+      </DivEstilizada>
+      <DivEstilizada>
+        <InputText
+          placeholder={"Digite sua senha "}
+          type={senhaVisivel ? "text" : "password"}
+          id={"senha"}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <IconeInput
+          src={SVGS.SenhaIcon}
+          id={"senhaIcon"}
+          className={"icones"}
+        />
+        <ButtonMostrarSenha
+          onClick={handleMostrarSenha}
+          src={senhaVisivel ? SVGS.MostrarSenhaVisivel : SVGS.MostrarSenhaIcon}
+          id={"mostrarSenha"}
+          className={"icones"}
+        />
+      </DivEstilizada>
+      <SpinnerLoading borderCor={CoresTemaEscuro.corBackgroundBotoes}/>
+      <ButtonEntrar onclick={hundleAuthentication}>ENTRAR</ButtonEntrar>
+    </DivLogin>
+    )
   }
 
   if (user) {

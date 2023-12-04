@@ -94,13 +94,12 @@ const CriarRelatorios = () => {
     <ConteinerGeral>
       <Dropdown terreiroNome={setarTerreiro} />
       <ContainerFiltro>
-        <TextosInferiores>De</TextosInferiores>
+        <TextosInferiores></TextosInferiores>
         <DropdownDataRelatorio idTerreno={terreiro} />
       </ContainerFiltro>
-      <ConteinerTipoRelatorio>
-        <TipoRelatorio>PDF</TipoRelatorio>
-        <TipoRelatorio>CSV</TipoRelatorio>
-      </ConteinerTipoRelatorio>
+      {/* <ConteinerTipoRelatorio>
+        <TipoRelatorio></TipoRelatorio>
+      </ConteinerTipoRelatorio> */}
       <Button width={100} onClick={criarRelatorio}>
         Criar Relatorio
       </Button>

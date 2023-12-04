@@ -1,10 +1,11 @@
 import { useParams, useNavigate } from "react-router";
-import relatorioJson from "../../../jsons/relatorios.json";
 import styled from "styled-components";
 import CoresTemaEscuro from "../../../Colors/cores";
 import Button from "../../Button";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import CriarPDF from "../FuncaoPDF";
+import CriarCSV from "../FuncaoCSV";
 
 const ContainerAplicacao = styled.div`
   display: flex;
@@ -51,6 +52,15 @@ const ContainerButtons = styled.div`
 `;
 const RelatorioAberto = () => {
   const [relatorios, setRelatorios] = useState(null);
+
+  function gerarDowloadPDF() {
+    CriarPDF({
+      criadorPDF: relatorio.criador,
+      dataRelatorioPDF: relatorio.data,
+      horaRelatorioPDF: relatorio.hora,
+      tempoFuncionamentoPDF: relatorio.funcionamento,
+    });
+  }
   useEffect(() => {
     axios
       .get(
@@ -64,7 +74,9 @@ const RelatorioAberto = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const relatorio = relatorios ? relatorios.find((relatorio) => relatorio.idTerreiro === id) : null;
+  const relatorio = relatorios
+    ? relatorios.find((relatorio) => relatorio.idTerreiro === id)
+    : null;
 
   if (!relatorio) {
     return <div>Relatorio não encontrado</div>;
@@ -92,7 +104,17 @@ const RelatorioAberto = () => {
         </ContainerInformações>
       </ContainerRelatorioAmostra>
       <ContainerButtons>
-        <Button width={100}>Dowload</Button>
+        <Button width={100} onClick={gerarDowloadPDF}>
+          Baixar Relatorio PDF
+        </Button>
+        <Button width={100}>
+          <CriarCSV
+            criadorCSV={relatorio.criador}
+            dataCriacaoCSV={relatorio.data}
+            horaCriacao={relatorio.hora}
+            tempoFuncionamentoCSV={relatorio.funcionamento}
+          />
+        </Button>
         <Button width={100} onClick={voltarParaRelatorios}>
           Voltar
         </Button>

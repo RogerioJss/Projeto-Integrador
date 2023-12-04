@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import { useAppContext } from "../../Contexts/contextHome.jsx";
 
 const ContainerNotificacao = styled.div`
   background-color: white;
@@ -33,6 +34,7 @@ const ModalNotificacao = ({
   idExterno,
 }) => {
   const [notificacoes, setNotificacoes] = useState(null);
+  const {isSwitchOn} = useAppContext()
 
 // async function FetchNotifications () {
 //     try{
@@ -55,7 +57,7 @@ const ModalNotificacao = ({
       .catch((error) => {
         console.log("erro ao obter notificações", error);
       });
-  },[]);
+  },[isSwitchOn]);
   return (
     <ReactModal
       isOpen={stateOpen}
