@@ -1,8 +1,8 @@
 import { pdfMake } from 'pdfmake/build/pdfmake'
-import pdfFonts from 'pdfmake/build/vfs_fonts'
+import * as pdfFonts from 'pdfmake/build/vfs_fonts'
 
 function CriarPDF({criadorPDF, tempoFuncionamentoPDF, horaRelatorioPDF,dataRelatorioPDF}){
-    pdfMake.vfs = pdfFonts.pdfMake;
+    pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
     const reportTitle = [ //para criar o titulo
         {
