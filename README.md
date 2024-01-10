@@ -1,6 +1,6 @@
 # Robbo-Coffee Site
 
-O site tem validação de login, segue abaixo o usuário padrão:
+O site tem validação de login, segue abaixo o usuário padrão.
 Email: nickolas@gmail.com
 Senha: 123456
 
